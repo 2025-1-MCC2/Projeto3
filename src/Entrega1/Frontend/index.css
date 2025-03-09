@@ -1,0 +1,109 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: white;
+    margin: 0; 
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    background-color: #6D28D9;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-buttons a {
+    text-decoration: none;
+    padding: 20px 20px;
+    background-color: #6D28D9;
+    color: white;
+    border-radius: 40px;
+}
+
+.nav-buttons a:hover {
+    background-color: #4d14aa;
+}
+
+.nav-buttons .cadastro {
+    background-color: #FC4A45;
+    font-weight: bold;
+}
+
+.nav-buttons .cadastro:hover {
+    background-color: #a42d28;
+}
+
+.nav-buttons .entrar {
+    background-color: #52CD51;
+    font-weight: bold;
+}
+
+.nav-buttons .entrar:hover {
+    background-color: #1c7d1c;
+}
+
+.banner {
+    align-items: left;
+    color: white;
+    text-shadow: rgb(0, 0, 0) 5px 5px 10px;
+    background-image: url('https://i.ibb.co/zHbv6T1S/Creche-Foto.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px;
+    text-align: center;
+}
+
+.banner h1 {
+    text-align: left;
+    font-size: 36px;
+    margin: 0;
+    padding: 0;
+}
+
+.banner p {
+    font-weight: 400;
+    text-align: left;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.banner .quero-ajudar {
+    text-decoration: none;
+    color: white;
+    background-color: #ffffff2f;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 20px;
+    padding: 15px 20px;
+    font-weight: bold;
+}
+
+.impacto {
+    padding: 20px 0;
+    color: black;
+    display: flex;
+    justify-content: justify;
+    align-items: left;
+    background-color: #ffffff;
+}
+
+.impacto h1 {
+    text-shadow: rgba(0, 0, 0, 0.527) 1px 1px 2px;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 100px;
+    color:#FC4A45
+}
