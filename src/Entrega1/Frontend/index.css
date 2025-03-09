@@ -1,0 +1,172 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: white;
+    margin: 0; 
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    background-color: #6D28D9;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-buttons a {
+    text-decoration: none;
+    padding: 20px 20px;
+    background-color: #6D28D9;
+    color: white;
+    border-radius: 40px;
+}
+
+.nav-buttons a:hover {
+    background-color: #4d14aa;
+}
+
+.nav-buttons .cadastro {
+    background-color: #FC4A45;
+    font-weight: bold;
+}
+
+.nav-buttons .cadastro:hover {
+    background-color: #a42d28;
+}
+
+.nav-buttons .entrar {
+    background-color: #52CD51;
+    font-weight: bold;
+}
+
+.nav-buttons .entrar:hover {
+    background-color: #1c7d1c;
+}
+
+.banner {
+    align-items: left;
+    color: white;
+    text-shadow: rgb(0, 0, 0) 5px 5px 10px;
+    background-image: url('imagens/CrecheFoto.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px;
+    text-align: center;
+}
+
+.banner h1 {
+    text-align: left;
+    font-size: 36px;
+    margin: 0;
+    padding: 0;
+}
+
+.banner p {
+    font-weight: 400;
+    text-align: left;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.banner .quero-ajudar {
+    text-decoration: none;
+    color: white;
+    background-color: #ffffff2f;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 20px;
+    padding: 15px 20px;
+    font-weight: bold;
+}
+
+.impacto {
+    gap: 0px;
+    padding: 20px 0;
+    color: black;
+    display: flex;
+    justify-content: justify;
+    align-items: left;
+    background-color: #ffffff;
+}
+
+.impacto h1 {
+    display: flex;
+    text-shadow: rgba(0, 0, 0, 0.527) 1px 1px 2px;
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0 100px;
+    color:#FC4A45
+}
+
+.impacto-itens {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin: 0 100px;
+}
+
+.impacto-imagens {
+    flex: 1;
+}
+
+.preto {
+    color: black;
+    font-size:36px;
+    font-weight: bold;
+}
+
+.azul {
+    color: #60f7ff;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.cinza{
+    color: #828282;
+    font-size: 18px;
+}
+.eventos{
+    gap: 0px;
+    padding: 20px 0;
+    color: black;
+    display: flex;
+    justify-content: justify;
+    align-items: left;
+    background-color: #ffffff;
+}
+.eventos h1{
+    display: flex;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 80px;
+    color:black
+}
+.eventos-itens {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin: 0 300px;
+}
+
+.eventos-subtitulo{
+    color: black;
+    font-weight: bold;
+    font-size: 20px
+}
+
+.eventos-descricao{
+    color:#828282;
+    font-size: 15px
+}
