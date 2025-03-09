@@ -57,7 +57,7 @@ header {
     align-items: left;
     color: white;
     text-shadow: rgb(0, 0, 0) 5px 5px 10px;
-    background-image: url('https://i.ibb.co/zHbv6T1S/Creche-Foto.png');
+    background-image: url('imagens/CrecheFoto.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -92,6 +92,7 @@ header {
 }
 
 .impacto {
+    gap: 0px;
     padding: 20px 0;
     color: black;
     display: flex;
@@ -101,9 +102,38 @@ header {
 }
 
 .impacto h1 {
+    display: flex;
     text-shadow: rgba(0, 0, 0, 0.527) 1px 1px 2px;
-    font-size: 28px;
+    font-size: 36px;
     font-weight: bold;
     margin: 0 100px;
     color:#FC4A45
+}
+
+.impacto-itens {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin: 0 100px;
+}
+
+.impacto-imagens {
+    flex: 1;
+}
+
+.preto {
+    color: black;
+    font-size:36px;
+    font-weight: bold;
+}
+
+.azul {
+    color: #60f7ff;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.cinza{
+    color: #828282;
+    font-size: 18px;
 }
