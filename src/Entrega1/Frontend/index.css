@@ -143,3 +143,36 @@ header {
     text-shadow: rgba(0, 0, 0, 0.527) 1px 1px 2px;
     font-size: 26px;
 }
+.eventos{
+    gap: 0px;
+    padding: 20px 0;
+    color: black;
+    display: flex;
+    justify-content: justify;
+    align-items: left;
+    background-color: #ffffff;
+}
+.eventos h1{
+    display: flex;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 80px;
+    color:black
+}
+.eventos-itens {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin: 0 300px;
+}
+
+.eventos-subtitulo{
+    color: black;
+    font-weight: bold;
+    font-size: 20px
+}
+
+.eventos-descricao{
+    color:#828282;
+    font-size: 15px
+}
