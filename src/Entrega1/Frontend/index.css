@@ -1,5 +1,5 @@
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: "Poppins", sans-serif;
     background-color: white;
     margin: 0; 
     padding: 0;
@@ -14,6 +14,7 @@ header {
 }
 
 .logo {
+    padding: 10px 12px;
     font-size: 24px;
     font-weight: bold;
 }
@@ -67,7 +68,7 @@ header {
 
 .banner h1 {
     text-align: left;
-    font-size: 36px;
+    font-size: 42px;
     margin: 0;
     padding: 0;
 }
@@ -75,7 +76,7 @@ header {
 .banner p {
     font-weight: 400;
     text-align: left;
-    font-size: 20px;
+    font-size: 24px;
     margin: 0;
     padding: 0;
 }
@@ -104,7 +105,7 @@ header {
 .impacto h1 {
     display: flex;
     text-shadow: rgba(0, 0, 0, 0.527) 1px 1px 2px;
-    font-size: 36px;
+    font-size: 52px;
     font-weight: bold;
     margin: 0 100px;
     color:#FC4A45
@@ -113,29 +114,34 @@ header {
 .impacto-itens {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
+    gap: 64px;
     margin: 0 100px;
 }
 
-.impacto-imagens {
+.impacto-imagem {
     flex: 1;
+    margin: 0 50px;
+
 }
 
 .preto {
-    color: black;
-    font-size:36px;
+    color: rgb(33, 33, 33);
+    text-shadow: rgba(0, 0, 0, 0.527) 1px 1px 2px;
+    font-size:52px;
     font-weight: bold;
 }
 
 .azul {
     color: #60f7ff;
-    font-size: 36px;
+    text-shadow: rgba(0, 0, 0, 0.527) 1px 1px 2px;
+    font-size: 52px;
     font-weight: bold;
 }
 
 .cinza{
     color: #828282;
-    font-size: 18px;
+    text-shadow: rgba(0, 0, 0, 0.527) 1px 1px 2px;
+    font-size: 26px;
 }
 .eventos{
     gap: 0px;
