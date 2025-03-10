@@ -176,3 +176,25 @@ header {
     color:#828282;
     font-size: 15px
 }
+.marcas{
+    gap: 0px;
+    padding: 20px 0;
+    color: black;
+    display: flex;
+    justify-content: justify;
+    align-items: left;
+    background-color: #ffffff;
+}
+.marcas h1{
+    display: flex;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 550px;
+    color:black
+}
+.marcas-imagem{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin: 0 350px;
+} 
