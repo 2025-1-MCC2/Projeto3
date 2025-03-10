@@ -10,7 +10,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 10px;
-    background-color: #6D28D9;
+    background-color: #8E51ED;
 }
 
 .logo {
@@ -27,13 +27,13 @@ header {
 .nav-buttons a {
     text-decoration: none;
     padding: 20px 20px;
-    background-color: #6D28D9;
+    background-color: #8E51ED;
     color: white;
     border-radius: 40px;
 }
 
 .nav-buttons a:hover {
-    background-color: #4d14aa;
+    background-color: #6a3db2;
 }
 
 .nav-buttons .cadastro {
@@ -46,12 +46,12 @@ header {
 }
 
 .nav-buttons .entrar {
-    background-color: #52CD51;
+    background-color: #008CFF;
     font-weight: bold;
 }
 
 .nav-buttons .entrar:hover {
-    background-color: #1c7d1c;
+    background-color: #005ba6;
 }
 
 .banner {
@@ -85,11 +85,16 @@ header {
     text-decoration: none;
     color: white;
     background-color: #ffffff2f;
-    border-color: rgb(255, 255, 255);
+    border-color: #ffffff;
     border-style: solid;
     border-radius: 20px;
     padding: 15px 20px;
     font-weight: bold;
+}
+
+.banner .quero-ajudar:hover {
+    background-color: #8181812f;
+    border-color: #c6c6c6;
 }
 
 .impacto {
@@ -121,7 +126,6 @@ header {
 .impacto-imagem {
     flex: 1;
     margin: 0 50px;
-
 }
 
 .preto {
@@ -175,4 +179,46 @@ header {
 .eventos-descricao{
     color:#828282;
     font-size: 15px
+}
+
+
+
+.footer {
+    line-height: 8px;
+    gap: 700px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    background-color: #8E51ED;
+}
+
+.footer-contato {
+    color: #FFEA00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-texto {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-direitos {
+    justify-content: right;
+    font-size: 12px;
+    text-wrap: nowrap;
+}
+
+.footer a {
+    line-height: 42px;
+    color: #FFEA00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
 }
