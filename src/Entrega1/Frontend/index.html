@@ -5,166 +5,168 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instituto Criativo - Educação criativa e inovadora</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
-<body> 
+<body>
     <header>
         <div class="logo">
-            <img src='imagens/logo/LogoTextoInstituto.png' alt="Instituto Criativo" width="252" height="42">
+            <img src="imagens/logo/LogoTextoInstituto.png" alt="Instituto Criativo" width="252" height="42">
         </div>
-        <div class="nav-buttons">
+        <nav class="nav-buttons">
             <a href="sobre.html">Sobre</a>
             <a href="blog.html">Blog</a>
             <a href="contato.html">Fale Conosco</a>
             <a href="cadastro.html" class="cadastro">Quero ser criativo</a>
             <a href="entrar.html" class="entrar">Já tenho cadastro</a>
-        </div>
+        </nav>
     </header>
+
     <section class="banner">
-        <div>
+        <div class="banner-content">
             <h1>Educação criativa e<br>inovadora</h1>
-            <br>
             <p>O Instituto Criativo é uma ONG que nasceu<br>para transformar a vida das pessoas.</p>
-            <br><br><br>
             <a href="cadastro.html" class="quero-ajudar">Quero ser criativo</a>
-            </p>
         </div>
-        <br><br>
     </section>
-    <br>
+
     <section class="impacto">
-        <div>
-            <h1>Impacto Social</h1>
-            <br><br>
-            <div class="impacto-itens">
-                <div><scan class="preto">100</scan><scan class="azul">+</scan><br><scan class="cinza">Projetos Criativos</scan></div>
-                <div><scan class="preto">2.500</scan><scan class="azul">+</scan><br><scan class="cinza">Educadores e Pais<br>Desenvolvidos</scan></div>
-                <div><scan class="preto">20.000</scan><scan class="azul">+</scan><br><scan class="cinza">Estudantes<br>Impactados</scan></div>
-                <div><scan class="preto">30.000</scan><scan class="azul">+</scan><br><scan class="cinza">Pessoas<br>Alcançadas</scan></div>
-            </div>
+        <h1>Impacto Social</h1>
+        <div class="impacto-itens">
+            <div><span class="preto">100</span><span class="azul">+</span><br><span class="cinza">Projetos Criativos</span></div>
+            <div><span class="preto">2.500</span><span class="azul">+</span><br><span class="cinza">Educadores e Pais Desenvolvidos</span></div>
+            <div><span class="preto">20.000</span><span class="azul">+</span><br><span class="cinza">Estudantes Impactados</span></div>
+            <div><span class="preto">30.000</span><span class="azul">+</span><br><span class="cinza">Pessoas Alcançadas</span></div>
         </div>
         <div class="impacto-imagem">
-            <img src='imagens/layout/FotoLucyEscrevendo.jpeg' alt="Lucy escrevendo" width="450">
-            </p>
+            <img src="imagens/FotoLucyEscrevendo.jpeg" alt="Lucy escrevendo" width="450" height="430">
         </div>
     </section>
-    <section class="eventos">
-        <div>
-            <!-- Seção dos eventos-->
-             
-            <h1>Eventos Recentes</h1><br>
-            <div class="eventos-itens">
-                <!-- Imagem dos eventos-->
-                <div><img src='imagens/eventos/evento-reuniao.png' class="img" alt="Evento Reuniao" width="550" height="300"><br>
-                    <scan class="eventos-subtitulo">Evento 1</scan><br><scan class="eventos-descricao">Descrição Evento 1</scan></div>
-                    
-                <div><img src='imagens/eventos/evento-balao.png' class="img" alt="Evento Balao" width="550" height="300"><br>
-                    <scan class="eventos-subtitulo">Evento 2</scan><br><scan class="eventos-descricao">Descrição Evento 2</scan></div>
-                <div><img src='imagens/eventos/evento-balao.png' class="img" alt="Evento Balao" width="550" height="300"><br>
-                    <scan class="eventos-subtitulo">Evento 2</scan><br><scan class="eventos-descricao">Descrição Evento 2</scan></div>
-    
+
+    <section class="carrossel">
+        <div class="carrossel-container">
+            <div class="carrossel-slide">
+                <img src="imagens/eventos/evento-reuniao.png" alt="Evento 1">
+                <img src="imagens/eventos/evento-balao.png" alt="Evento 2">
+                <img src="imagens/eventos/evento-lucy-crianca.jpeg" alt="Evento 3">
             </div>
+        </div>
+    </section>
+
+    <section class="eventos">
+        <h1>Eventos Recentes</h1>
+        <div class="eventos-itens">
+            <div>
+                <img src="imagens/eventos/evento-reuniao.png" class="img" alt="Evento Reuniao" width="550" height="300">
+                <p class="eventos-subtitulo">Evento 1</p>
+                <p class="eventos-descricao">Descrição Evento 1</p>
+            </div>
+            <div>
+                <img src="imagens/eventos/evento-balao.png" class="img" alt="Evento Balao" width="550" height="300">
+                <p class="eventos-subtitulo">Evento 2</p>
+                <p class="eventos-descricao">Descrição Evento 2</p>
+            </div>
+            <div>
+                <img src="imagens/eventos/evento-lucy-crianca.jpeg" class="img" alt="Evento Lucy Crianca" width="550" height="300">
+                <p class="eventos-subtitulo">Evento 3</p>
+                <p class="eventos-descricao">Descrição Evento 3</p>
         </div>
     </section>
 
     <section class="membros">
-        <div>
-            
-            <!-- Seção dos fundadores-->
-            <h1>Parceiros e Voluntários</h1><br>
-            
-            <div class ="membros-1fileira">
-                <!-- Imagem dos fundadores-->
-                <div><img src='imagens/membros/lucy_mari.jpg' class="img" alt="Lucy Mari" width="250" height="250"><br>
-                <scan class="membros1-nome">Lucy Mari</scan><br><scan class="membros1-descricao">Empresária, educadora, psicoterapeuta, formada em matemática, mestre em ciência da computação, MBA em educação e doutora em engenharia de computação pela USP</scan></div>
-
-                <div><img src='imagens/membros/rodrigo_assirati.jpg' class="img" alt="Rodrigo Assirati" width="250" height="250"><br>
-                <scan class="membros1-nome">Rodrigo Assirati</scan><br><scan class="membros1-descricao">Educador e empreendedor, especialista de em educação pela Microsoft e consultor de tecnologia em várias empresas.</scan></div>
-            
-            </div>
-            <br>
-            <!-- Seção dos funcionários-->
-            <div class ="membros-2fileira">
-                <!-- Imagem dos funcionários-->
-                <div><img src='imagens/membros/Deyse-Santana.jpeg' class="img" alt="Deyse Santana" width="150" height="150"><br>
-                <scan class="membros2-nome">Deyse Santana</scan><br><scan class="membros2-descricao">PlaceHolder 3</scan></div>  
-
-                <div><img src='imagens/membros/joao_querlon.jpg' class="img" alt="Joao Querlon" width="150" height="150"><br>
-                <scan class="membros2-nome">Joao Querlon</scan><br><scan class="membros2-descricao">PlaceHolder 3</scan></div> 
-
-                <div><img src='imagens/membros/felipe_almeida.jpg' class="img" alt="Felipe Almeida" width="150" height="150"><br>
-                <scan class="membros2-nome">Felipe Almeida</scan><br><scan class="membros2-descricao">PlaceHolder 3</scan></div>  
-                
-                <div><img src='imagens/membros/joaquim_roberto.jpg' class="img" alt="Joaquim Roberto" width="150" height="150"><br>
-                <scan class="membros2-nome">Joaquim Roberto</scan><br><scan class="membros2-descricao">PlaceHolder 3</scan></div>
-                
-                <div><img src='imagens/membros/carlos_albertini.jpg' class="img" alt="Carlos E. Albertini" width="150" height="150"><br>
-                <scan class="membros2-nome">Carlos E. Albertini</scan><br><scan class="membros2-descricao">PlaceHolder 3</scan></div>
-
-                <div><img src='imagens/membros/marcos_brito.jpg' class="img" alt="Marcos Brito" width="150" height="150"><br>
-                <scan class="membros2-nome">Marcos Brito</scan><br><scan class="membros2-descricao">PlaceHolder 3</scan></div>    
-            </div><br>
+        <h1>Parceiros e Voluntários</h1>
+        <div class="membros-1fileira">
             <div>
-                <div class="membros-3fileira">
-                    <!-- Imagem dos funcionários-->
-                    <div><img src='imagens/membros/voluntario1.jpg'  alt="voluntario1" width="100"><br></div>
-                    <div><img src='imagens/membros/voluntario2.jpg'  alt="voluntario2" width="100"><br></div>
-                    <div><img src='imagens/membros/voluntario3.jpg'  alt="voluntario3" width="100"><br></div>
-                    <div><img src='imagens/membros/voluntario4.jpg'  alt="voluntario4" width="100"><br></div>
-                    <div><img src='imagens/membros/voluntario5.jpg'  alt="voluntario5" width="100"><br></div>
-                    <div><img src='imagens/membros/voluntario6.jpg'  alt="voluntario6" width="100"><br></div>
-                    <div><img src='imagens/membros/voluntario7.jpg'  alt="voluntario7" width="100"><br></div>
-                    <div><img src='imagens/membros/voluntario8.jpg'  alt="voluntario8" width="100"><br></div>
-                    <div><img src='imagens/membros/voluntario9.jpg'  alt="voluntario9" width="100"><br></div>
-                    <div><img src='imagens/membros/voluntario10.jpg'  alt="voluntario10" width="100"><br></div>
-                    <div><img src='imagens/membros/voluntario11.jpg'  alt="voluntario11" width="100"><br></div>
-                    <div><img src='imagens/membros/voluntario12.jpg'  alt="voluntario12" width="100"><br></div>
-                    <div><img src='imagens/membros/voluntario13.jpg'  alt="voluntario13" width="100"><br></div>
-                    <div><img src='imagens/membros/voluntario14.jpg'  alt="voluntario14" width="100"><br></div>
-                    <div><img src='imagens/membros/voluntario15.jpg'  alt="voluntario15" width="100"><br></div>
-                    <div><img src='imagens/membros/voluntario16.jpg'  alt="voluntario16" width="100"><br></div>
-                    
-                    
-                    
-                    
-                </div>        
-            </div>   
+                <img src="imagens/membros/lucy_mari.jpg" class="img" alt="Lucy Mari" width="250" height="250">
+                <p class="membros1-nome">Lucy Mari</p>
+                <p class="membros1-descricao">PlaceHolder 1</p>
+            </div>
+            <div>
+                <img src="imagens/membros/rodrigo_assirati.jpg" class="img" alt="Rodrigo Assirati" width="250" height="250">
+                <p class="membros1-nome">Rodrigo Assirati</p>
+                <p class="membros1-descricao">PlaceHolder 2</p>
+            </div>
         </div>
-
+        <div class="membros-2fileira">
+            <div>
+                <img src="imagens/membros/Deyse-Santana.jpeg" class="img" alt="Deyse Santana" width="150" height="150">
+                <p class="membros2-nome">Deyse Santana</p>
+                <p class="membros2-descricao">PlaceHolder 3</p>
+            </div>
+            <div>
+                <img src="imagens/membros/joao_querlon.jpg" class="img" alt="Joao Querlon" width="150" height="150">
+                <p class="membros2-nome">Joao Querlon</p>
+                <p class="membros2-descricao">PlaceHolder 3</p>
+            </div>
+            <div>
+                <img src="imagens/membros/felipe_almeida.jpg" class="img" alt="Felipe Almeida" width="150" height="150">
+                <p class="membros2-nome">Felipe Almeida</p>
+                <p class="membros2-descricao">PlaceHolder 3</p>
+            </div>
+            <div>
+                <img src="imagens/membros/joaquim_roberto.jpg" class="img" alt="Joaquim Roberto" width="150" height="150">
+                <p class="membros2-nome">Joaquim Roberto</p>
+                <p class="membros2-descricao">PlaceHolder 3</p>
+            </div>
+            <div>
+                <img src="imagens/membros/carlos_albertini.jpg" class="img" alt="Carlos E. Albertini" width="150" height="150">
+                <p class="membros2-nome">Carlos E. Albertini</p>
+                <p class="membros2-descricao">PlaceHolder 3</p>
+            </div>
+            <div>
+                <img src="imagens/membros/marcos_brito.jpg" class="img" alt="Marcos Brito" width="150" height="150">
+                <p class="membros2-nome">Marcos Brito</p>
+                <p class="membros2-descricao">PlaceHolder 3</p>
+            </div>
+        </div>
+        <div class="membros-3fileira">
+            <div><img src="imagens/membros/voluntario1.jpg" alt="voluntario1" width="50" height="50"></div>
+            <div><img src="imagens/membros/voluntario2.jpg" alt="voluntario2" width="50" height="50"></div>
+            <div><img src="imagens/membros/voluntario3.jpg" alt="voluntario3" width="50" height="50"></div>
+            <div><img src="imagens/membros/voluntario4.jpg" alt="voluntario4" width="50" height="50"></div>
+            <div><img src="imagens/membros/voluntario5.jpg" alt="voluntario5" width="50" height="50"></div>
+            <div><img src="imagens/membros/voluntario6.jpg" alt="voluntario6" width="50" height="50"></div>
+            <div><img src="imagens/membros/voluntario7.jpg" alt="voluntario7" width="50" height="50"></div>
+            <div><img src="imagens/membros/voluntario8.jpg" alt="voluntario8" width="50" height="50"></div>
+            <div><img src="imagens/membros/voluntario9.jpg" alt="voluntario9" width="50" height="50"></div>
+            <div><img src="imagens/membros/voluntario10.jpg" alt="voluntario10" width="50" height="50"></div>
+            <div><img src="imagens/membros/voluntario11.jpg" alt="voluntario11" width="50" height="50"></div>
+            <div><img src="imagens/membros/voluntario12.jpg" alt="voluntario12" width="50" height="50"></div>
+            <div><img src="imagens/membros/voluntario13.jpg" alt="voluntario13" width="50" height="50"></div>
+            <div><img src="imagens/membros/voluntario14.jpg" alt="voluntario14" width="50" height="50"></div>
+            <div><img src="imagens/membros/voluntario15.jpg" alt="voluntario15" width="50" height="50"></div>
+            <div><img src="imagens/membros/voluntario16.jpg" alt="voluntario16" width="50" height="50"></div>
+        </div>
     </section>
 
-    <br>
     <section class="marcas">
-    <div>
-        <h1>Estamos conectados com grandes marcas</h1><br>
+        <h1>Estamos conectados com grandes marcas</h1>
         <div class="marcas-imagem">
-        <div><img src='imagens/marcas/Marcas.png'alt="Marcas Parceiras" width="1000" height="150"><br></div>
-
+            <img src="imagens/Marcas.png" alt="Marcas Parceiras">
         </div>
-    </div>
     </section>
-    <br>
+
     <footer>
-        <div class="footer-box">
-            <div>
-                <p class="footer-contato">Contato</p>
-                <p class="footer-texto">WhatsApp e telefone</p>
-                <a href='https://api.whatsapp.com/send?phone=5511910747492'>(11) 91074-7492</a><br>
-                <img src='imagens/marcas/WhatsApp.png' alt="Instituto Criativo" width="35" height="35" class="whatsapp"><br><br> 
-                <img src='imagens/logo/LogoTextoInstituto.png' alt="Instituto Criativo" width="252" height="42" class="logo">
-                <div class="footer-direitos">
-                    <p>© 2025 Instituto Criativo. Todos os direitos reservados.</p>
-                </div>
+        <div class="footer-content">
+            <div class="footer-contato">
+                <p class="footer-titulo">Contato</p>
+                <p><i class="fas fa-phone-alt"></i> WhatsApp e telefone</p>
+                <a href="https://api.whatsapp.com/send?phone=5511910747492">
+                    <i class="fab fa-whatsapp"></i> (11) 91074-7492
+                </a>
             </div>
-            <div>
-                <a href="sobre.html">Sobre</a><br>
-                <a href="blog.html">Blog</a><br>
-                <a href="contato.html">Fale Conosco</a><br>
-                <a href="cadastro.html" class="cadastro">Quero ser criativo</a><br>
-                <a href="entrar.html" class="entrar">Já tenho cadastro</a><br>
+            <div class="footer-links">
+                <p class="footer-titulo">Links Rápidos</p>
+                <a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a>
+                <a href="blog.html"><i class="fas fa-blog"></i> Blog</a>
+                <a href="contato.html"><i class="fas fa-envelope"></i> Fale Conosco</a>
             </div>
+        </div>
+        <div class="footer-direitos">
+            <p>© 2025 Instituto Criativo. Todos os direitos reservados.</p>
         </div>
     </footer>
 
+    <script src="scripts.js"></script>
 </body>
 </html>
