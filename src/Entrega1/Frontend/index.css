@@ -6,22 +6,31 @@ body {
 }
 
 header {
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color: #8E51ED;
 }
 
+img {
+    border-radius: 10px;
+}
+
 .logo {
-    padding: 10px 12px;
+    padding-top: 10px;
     font-size: 24px;
     font-weight: bold;
+    margin-left: 2%;
 }
 
 .nav-buttons {
     display: flex;
     gap: 10px;
+    margin-right: 2%;
 }
 
 .nav-buttons a {
@@ -46,11 +55,8 @@ header {
 }
 
 .nav-buttons .entrar {
-
     background-color: #F1C411;
-
     background-color: #008CFF;
-
     font-weight: bold;
 }
 
@@ -63,15 +69,14 @@ header {
 }
 
 .banner {
-    align-items: left;
     color: white;
     text-shadow: rgb(0, 0, 0) 5px 5px 10px;
-    background-image: url('imagens/banner/CrecheFoto.png');
+    background-image: url('imagens/layout/CrecheFoto.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 100px;
-    text-align: center;
+    padding: 7%;
+    border-top: 7%;
 }
 
 .banner h1 {
@@ -89,7 +94,8 @@ header {
     padding: 0;
 }
 
-.banner .quero-ajudar {
+.banner a {
+    justify-content: justify;
     text-decoration: none;
     color: white;
     background-color: #ffffff2f;
@@ -106,11 +112,10 @@ header {
 }
 
 .impacto {
-    gap: 0px;
-    padding: 20px 0;
+    padding: 20px 7%;
     color: black;
     display: flex;
-    justify-content: justify;
+    justify-content: space-between;
     align-items: left;
     background-color: #ffffff;
 }
@@ -120,135 +125,157 @@ header {
     text-shadow: rgba(0, 0, 0, 0.527) 1px 1px 2px;
     font-size: 52px;
     font-weight: bold;
-    margin: 0 100px;
     color:#FC4A45
 }
 
 .impacto-itens {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 64px;
-    margin: 0 100px;
+    column-gap: 64px;
 }
 
 .impacto-imagem {
-    flex: 1;
-    margin: 0 50px;
+    padding-top: 5%;
+    justify-content: right;
 }
 
-.preto {
-    color: rgb(33, 33, 33);
-    text-shadow: rgba(0, 0, 0, 0.527) 1px 1px 2px;
-    font-size:52px;
-    font-weight: bold;
+.impacto img {
+    box-shadow: rgba(0, 0, 0, 0.193) 0px 0px 25px;
+    border-radius: 20px;
 }
 
-.azul {
-    color: #60f7ff;
-    text-shadow: rgba(0, 0, 0, 0.527) 1px 1px 2px;
-    font-size: 52px;
-    font-weight: bold;
-}
-
-.cinza{
-    color: #828282;
-    text-shadow: rgba(0, 0, 0, 0.527) 1px 1px 2px;
-    font-size: 26px;
-}
-.eventos{
-    gap: 0px;
-    padding: 20px 0;
-    color: black;
+.eventos {
     display: flex;
     justify-content: justify;
-    align-items: left;
+    gap: 0px;
+    width: 100%;
+    padding: 20px 7%;
+    color: black;
     background-color: #ffffff;
 }
-.eventos h1{
+
+.eventos h1 {
     display: flex;
     font-size: 28px;
     font-weight: bold;
-    margin: 0 80px;
     color:black
 }
+
+.eventos img {
+    border-radius: 0px;
+}
+
 .eventos-itens {
     display: grid;
+    align-items: center;
     grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
-    margin: 0 300px;
+    gap: 3%;
     
 }
 
-.eventos-subtitulo{
+.eventos-subtitulo {
     color: black;
     font-weight: bold;
     font-size: 20px
 }
 
-.eventos-descricao{
+.eventos-descricao {
     color:#828282;
     font-size: 15px
 }
 
-.membros{
-    
-    padding: 20px 10px;
-    color: black;
+.membros {
+    max-width: 100%;
     display: flex;
-    justify-content: justify;
-    align-items: center;
+    padding: 20px 7%;
+    justify-items: center;
+    text-align: center;
+    color: black;
     background-color: #ffffff;
 }
-.membros h1{
+
+.membros h1 {
     display: flex;
     font-size: 28px;
     font-weight: bold;
-    
     color:black
 }
+
 .membros-1fileira {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    justify-content: space-evenly;
     gap: 100px;
     
 }
-.membros-2fileira{
+
+.membros-2fileira {
     display: grid;
+    justify-content: space-evenly;
     grid-template-columns: repeat(6, 1fr);
     gap: 10px;
 }
-.membros-3fileira{
+
+.membros-3fileira {
     display: grid;
+    justify-content: center;
     grid-template-columns: repeat(8, 1fr);
-    gap: 1px;
+    gap: 20px;
 }
-.img{
-    border-radius: 15px;
+
+.membros-3fileira img {
+    border-radius: 5px;
 }
-.membros1-nome{
+
+.membros1-nome {
     color: black;
     font-weight: bold;
     font-size: 20px
 }
-.membros1-descricao{
+
+.membros1-descricao {
     color:#828282;
     font-size: 15px
 }
-.membros2-nome{
+
+.membros2-nome {
     color: black;
     font-weight: bold;
     font-size: 15px
 }
-.membros2-descricao{
+
+.membros2-descricao {
     color:#828282;
     font-size: 10px
 }
 
+.marcas {
+    gap: 0px;
+    padding: 20px 0;
+    color: black;
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+}
 
-.footer {
+.marcas h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+    color:black
+}
+
+.marcas-imagem {
+    display: flex;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 32px;
+    margin: 0 350px;
+} 
+
+.footer-box {
     line-height: 8px;
-    gap: 700px;
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
     align-items: center;
@@ -274,37 +301,35 @@ header {
     text-wrap: nowrap;
 }
 
-.footer a {
+.footer-box a {
     line-height: 42px;
     color: #FFEA00;
     text-decoration: none;
     font-weight: bold;
 }
 
-.footer a:hover {
+.footer-box a:hover {
     text-decoration: underline;
 }
 
-.marcas{
-    gap: 0px;
-    padding: 20px 0;
-    color: black;
-    display: flex;
-    justify-content: justify;
-    align-items: left;
-    background-color: #ffffff;
-}
-.marcas h1{
-    display: flex;
-    font-size: 28px;
-    font-weight: bold;
-    margin: 0 550px;
-    color:black
-}
-.marcas-imagem{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
-    margin: 0 350px;
-} 
+/* ------------------------------------------------------------------------------- CORES ------------------------------------------------------------------------------- */
 
+.preto {
+    color: rgb(33, 33, 33);
+    text-shadow: rgba(0, 0, 0, 0.527) 1px 1px 2px;
+    font-size:52px;
+    font-weight: bold;
+}
+
+.azul {
+    color: #60f7ff;
+    text-shadow: rgba(0, 0, 0, 0.527) 1px 1px 2px;
+    font-size: 52px;
+    font-weight: bold;
+}
+
+.cinza{
+    color: #828282;
+    text-shadow: rgba(0, 0, 0, 0.527) 1px 1px 2px;
+    font-size: 26px;
+}
