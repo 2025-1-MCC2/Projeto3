@@ -1,4 +1,4 @@
-# Projeto3
+# Dashboard Instituto Criativo
 Projeto 3
 
 <p align="center">
@@ -9,9 +9,9 @@ Projeto 3
 
 ## Nome do Grupo
 
-## Integrantes: <a href="https://www.linkedin.com/in/victorbarq/">Goku Sayajin</a>, <a href="https://www.linkedin.com/in/victorbarq/">Saitama One</a>, <a href="https://www.linkedin.com/in/victorbarq/">Ikki de Fenix</a>, <a href="https://www.linkedin.com/in/victorbarq/">Yusuke Urameshi</a> & <a href="https://www.linkedin.com/in/thiffany-morais/">Thiffany Morais</a>
+## Integrantes: <a href="https://www.linkedin.com/in/eric-victor-bittu-silva-014a5b2b5/">Eric Victor Bittu Silva</a>, <a href="https://www.linkedin.com/in/vivian-umaki-994686339/">Vivian Kaori Umaki</a>, <a href="https://www.linkedin.com/in/yanko-lee-b3851a317/">Yanko Lee</a>, <a href="https://www.linkedin.com/in/bruno-eduardo-4b10b012a/">Bruno Eduardo da Silva Pinho</a> & <a href="https://www.linkedin.com/in/thiffany-morais/">Thiffany Morais</a>
 
-## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Dr. Victor Von Doom</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Saitama</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Strange</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Yoda</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Gero</a>
+## Professores Orientadores:  <a href="https://www.linkedin.com/in/cristina-machado-corr%C3%AAa-leite-630309160/">Cristina Machado Corrêa Leite</a>,  <a href="https://www.linkedin.com/in/dolemes/">David De Oliveira Lemes</a>, <a href="https://www.linkedin.com/in/francisco-escobar/">Francisco de Souza Escobar</a>, <a href="https://www.linkedin.com/in/katia-bossi/">Katia Milani Lara Bossi</a>,  <a href="https://www.linkedin.com/in/leonardo-fabris-lugoboni-a3369416/">Leonardo Fabris Lugoboni</a>
 
 ## Descrição
 
