@@ -33,7 +33,7 @@ header {
     text-decoration: none;
     padding: 12px 24px;
     color: white;
-    border-radius: 30px;
+    border-radius: 15px;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     font-size: 14px;
     font-weight: 500;
@@ -221,20 +221,21 @@ header {
     border-radius: 15px;
 }
 
-/* Estilo Eventos */
-.eventos {
+/* Estilo Valores */
+.valores {
     padding: 60px 20px;
     background-color: white;
+    text-align: center;
 }
 
-.eventos h1 {
+.valores h1 {
     font-size: 36px;
     color: #212121;
     text-align: center;
     margin-bottom: 40px;
 }
 
-.eventos-itens {
+.valores-itens {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
@@ -242,20 +243,20 @@ header {
     margin: 0 auto;
 }
 
-.eventos-itens img {
-    width: 100%;
+.valores-itens img {
+    width: 15%;
     height: auto;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.eventos-subtitulo {
+.valores-subtitulo {
     font-size: 24px;
     color: #212121;
     margin: 10px 0;
 }
 
-.eventos-descricao {
+.valores-descricao {
     font-size: 16px;
     color: #828282;
 }
