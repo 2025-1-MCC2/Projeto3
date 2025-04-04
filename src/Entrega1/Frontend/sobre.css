@@ -188,7 +188,7 @@ header {
     display: grid;
     grid-template-columns: repeat(2, minmax(500px, 1fr));
     gap: 5%;
-    margin: 0 0;
+    margin: 5% 0;
 }
 
 .segmentos h1 {
@@ -238,17 +238,17 @@ header {
     font-size: 26px;
     max-width: fit-content;
     color: white;
-    background-color: #447FFF;
+    background-color: #EEB64D;
     border-radius: 15px;
     padding: 1% 2%;
     margin: 0;
 }
 
-.segmentos-bemEestar {
+.segmentos-bemEstar {
     font-size: 26px;
     max-width: fit-content;
     color: white;
-    background-color: #447FFF;
+    background-color: #4DC80C;
     border-radius: 15px;
     padding: 1% 2%;
     margin: 0;
