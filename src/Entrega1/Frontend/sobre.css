@@ -1,4 +1,5 @@
 /* Estilo global */
+
 body {
     font-family: "Poppins", sans-serif;
     background-color: white;
@@ -9,6 +10,7 @@ body {
 }
 
 /* Estilo Header */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -23,6 +25,7 @@ header {
 }
 
 /* Estilos botoes */
+
 .nav-buttons {
     display: flex;
     gap: 10px;
@@ -52,6 +55,7 @@ header {
 }
 
 /* Botão Sobre, Blog, Fale Conosco */
+
 .nav-buttons a:not(.cadastro):not(.entrar) {
     background-color: rgba(255, 255, 255, 0.1);
     border: 2px solid rgba(255, 255, 255, 0.2);
@@ -62,6 +66,7 @@ header {
 }
 
 /* Botão Cadastro */
+
 .nav-buttons .cadastro {
     background-color: #FC4A45;
     border: 2px solid #FC4A45;
@@ -85,6 +90,7 @@ header {
 
 
 /* Estilo banner */
+
 .banner {
     background-image: url('imagens/layout/MaoPintada.png');
     background-size: cover;
@@ -122,108 +128,10 @@ header {
     margin: 10px 0 20px;
 }
 
-.banner .quero-ajudar {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border: 2px solid white;
-    border-radius: 20px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.banner .quero-ajudar:hover {
-    background-color: rgba(129, 129, 129, 0.2);
-    transform: translateY(-2px);
-}
-
-/* Estilo Impactos */
-.impacto {
-    padding: 60px 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-}
-
-.impacto h1 {
-    font-size: 52px;
-    color: #FC4A45;
-    margin: 0 0 20px;
-    text-align: center;
-    width: 100%;
-}
-
-.impacto-itens {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    margin: 0 auto;
-    max-width: 800px;
-}
-
-.impacto-imagem img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Cores texto */
-
-.preto, .azul, .cinza {
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.527);
-    font-weight: bold;
-}
-
-.preto {
-    color: #212121;
-    font-size: 52px;
-}
-
-.azul {
-    color: #60f7ff;
-    font-size: 52px;
-}
-
-.cinza {
-    color: #828282;
-    font-size: 26px;
-}
-
-/* Estilo Carrossel */
-.carrossel {
-    padding: 60px 20px;
-    background-color: #f9f9f9;
-}
-
-.carrossel-container {
-    overflow: hidden;
-    position: relative;
-    max-width: 400px;
-    margin: 0 auto;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.carrossel-slide {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carrossel-slide img {
-    width: 100%;
-    height: auto;
-    flex-shrink: 0;
-    border-radius: 15px;
-}
-
 /* Estilo Valores */
+
 .valores {
-    padding: 60px 20px;
+    padding: 60px 0px   ;
     background-color: white;
     text-align: center;
 }
@@ -235,16 +143,24 @@ header {
     margin-bottom: 40px;
 }
 
-.valores-itens {
+.valores-container {
     display: grid;
+    background-color: #dcccff;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 0 2%;
+    margin: 0 0;
 }
 
-.valores-itens img {
-    width: 15%;
+.valores-itens {
+    max-width: fit-content;
+    margin: 7% 20%;
+    padding: 7%;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.valores-container img {
+    width: 25%;
     height: auto;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -261,75 +177,95 @@ header {
     color: #828282;
 }
 
-/* Estilo Membros */
-.membros {
-    padding: 60px 20px;
-    background-color: #f9f9f9;
+/* Estilo Segmentos */
+
+.segmentos {
+    padding: 60px 5%;
+    background-color: white;
 }
 
-.membros h1 {
+.segmentos-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(500px, 1fr));
+    gap: 5%;
+    margin: 5% 0;
+}
+
+.segmentos h1 {
     font-size: 36px;
     color: #212121;
-    text-align: center;
+    text-align: left;
     margin-bottom: 40px;
+    font-weight: bold;
 }
 
-.membros-1fileira, .membros-2fileira, .membros-3fileira {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+.segmentos-itens {
+    max-width: fit-content;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    border-radius: 15px;
 }
 
-.membros-1fileira img, .membros-2fileira img, .membros-3fileira img {
+.segmentos-itens .img {
     width: 100%;
-    max-width: 250px;
     height: auto;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.membros1-nome, .membros2-nome {
-    font-size: 20px;
-    color: #212121;
-    margin: 10px 0;
-    text-align: center;
+.segmentos-aprendizado {
+    font-size: 26px;
+    max-width: fit-content;
+    color: white;
+    background-color: #F45252;
+    border-radius: 15px;
+    padding: 1% 2%;
+    margin: 0;
 }
 
-.membros1-descricao, .membros2-descricao {
+.segmentos-emprego {
+    font-size: 26px;
+    max-width: fit-content;
+    color: white;
+    background-color: #447FFF;
+    border-radius: 15px;
+    padding: 1% 2%;
+    margin: 0;
+}
+
+.segmentos-recolocacao {
+    font-size: 26px;
+    max-width: fit-content;
+    color: white;
+    background-color: #EEB64D;
+    border-radius: 15px;
+    padding: 1% 2%;
+    margin: 0;
+}
+
+.segmentos-bemEstar {
+    font-size: 26px;
+    max-width: fit-content;
+    color: white;
+    background-color: #4DC80C;
+    border-radius: 15px;
+    padding: 1% 2%;
+    margin: 0;
+}
+
+.segmentos-idades {
     font-size: 16px;
+    margin: 1% 0;
     color: #828282;
-    text-align: center;
-}
-/* Estilo Marcas */
-.marcas {
-    padding: 60px 20px;
-    background-color: white;
-    text-align: center;
 }
 
-.marcas h1 {
-    font-size: 36px;
-    color: #212121;
-    margin-bottom: 20px;
+.segmentos-detalhes {
+    font-size: 24px;
+    color: black;
+    margin: 2% 0;
 }
 
-.marcas-imagem {
-    max-width: 1000px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.marcas-imagem img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
 
 /* Estilo Footer */
 
@@ -391,6 +327,35 @@ footer {
     font-size: 18px;
     color: #FFEA00;
 }
+
+.icone {
+    max-width: 35px;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Cores texto */
+
+.preto, .azul, .cinza {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.527);
+    font-weight: bold;
+}
+
+.preto {
+    color: #212121;
+    font-size: 52px;
+}
+
+.azul {
+    color: #60f7ff;
+    font-size: 52px;
+}
+
+.cinza {
+    color: #828282;
+    font-size: 26px;
+}
+
 
 /* Responsividade */
 
