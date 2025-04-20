@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://www.institutocriativo.com.br/images/favicon.png" rel="shortcut icon" type="image/x-icon">
-    <title>Instituto Criativo - Educação criativa e inovadora</title>
+    <title>Login - Instituto Criativo</title>
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
@@ -22,6 +22,53 @@
             <a href="entrar.html" class="entrar">Já tenho cadastro</a>
         </nav>
     </header>
+
+    <section class="box-login">
+        <div class="auth-container">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <div class="auth-title">Acesse sua conta</div>
+                </div>
+
+                <div class="auth-body">
+                    <div id="message" class="alert alert-error" style="display: none;"></div>
+
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label class="form-label">E-mail</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-envelope input-icon"></i>
+                                <input type="email" id="email" class="form-control" placeholder="seu@email.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Senha</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-lock input-icon"></i>
+                                <input type="password" id="password" class="form-control" placeholder="Digite sua senha" required>
+                                <i class="fas fa-eye toggle-password" id="togglePassword"></i>
+                            </div>
+                        </div>
+
+                        <br>
+                        <div class="form-group">
+                            <div class="box-entrar">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-sign-in-alt"></i>
+                                    Entrar
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="auth-footer">
+                        Não tem uma conta? <a href="register.html" class="auth-link">Cadastre-se</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
     <footer>
         <div class="footer-content">
