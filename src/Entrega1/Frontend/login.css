@@ -231,41 +231,6 @@ header {
     text-decoration: underline;
 }
 
-.social-login {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.social-btn {
-    flex: 1;
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.social-btn:hover {
-    background: #f9f9f9;
-}
-
-.social-icon {
-    font-size: 1.2rem;
-}
-
-.google-btn {
-    color: #DB4437;
-}
-
-.facebook-btn {
-    color: #4267B2;
-}
-
 :root {
     --primary: #8E51ED;
     --secondary: #9d50bb;
@@ -344,7 +309,7 @@ footer {
 
 /* Ícones do Font Awesome */
 .box-login .fas{
-    color: #777777;
+    color: #6c757d;
 }
 
 .box-entrar .fas{
