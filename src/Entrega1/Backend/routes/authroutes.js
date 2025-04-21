@@ -34,7 +34,7 @@ router.post('/login', async(req, res)=>{
         )
         const user = users[0]
         if (!user) return res.status(400).send('Usuário não encontrado')
-            const valid = await bcrypt.compare(password, user.senha)
+        const valid = await bcrypt.compare(password, user.senha)
         if(!valid) return res.status(401).send('Senha Incorreta')
             const token = jwt.sign(
                 { id: user.id, username: user.nome },
@@ -43,9 +43,11 @@ router.post('/login', async(req, res)=>{
             )
             
         res.json({token})
-    } catch{
+    } catch (err) {
+        console.error(err)
         res.status(500).send('Erro ao fazer login')
-    }
+      }
+      
 })
 //Middlewares
 function authMiddleware(req, res, next){
