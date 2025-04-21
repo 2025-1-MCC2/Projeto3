@@ -7,17 +7,17 @@ import db from '../db.js'
 const router = express.Router()
 //Registro
 router.post('/register', async(req, res)=>{
-    const {nome, senha} = req.body
+    const {username, password} = req.body
     try{
         const [existing] = await db.execute(
             'SELECT * FROM membro WHERE nome = ?',
-            [nome]
+            [username]
         )
         if(existing.length > 0) return res.status(400).send('Usuário já existe')
-        const hashed = await bcrypt.hash(senha, 10)
+        const hashed = await bcrypt.hash(password, 10)
         await db.execute(
             'INSERT INTO membro(nome, senha) VALUES (?,?)',
-            [nome, hashed]
+            [username, hashed]
         )
         res.redirect('/login.html') //Inserir Aspas e barra para redirecionar
     } catch{
@@ -26,30 +26,29 @@ router.post('/register', async(req, res)=>{
 })
 //Login
 router.post('/login', async(req, res)=>{
-    const { nome, password } = req.body
+    const {username, password} = req.body
     try{
         const [users] = await db.execute(
             'SELECT * FROM membro WHERE nome = ?',
-            [nome] 
+            [username] 
         )
         const user = users[0]
         if (!user) return res.status(400).send('Usuário não encontrado')
         const valid = await bcrypt.compare(password, user.senha)
         if(!valid) return res.status(401).send('Senha Incorreta')
-        
-        const token = jwt.sign(
-            { id: user.id, nome: user.nome },
-            process.env.JWT_SECRET,
-            { expiresIn: '1h' }
-        )
-        
+            const token = jwt.sign(
+                { id: user.id, username: user.nome },
+                process.env.JWT_SECRET,
+                { expiresIn: '1h' }
+            )
+            
         res.json({token})
     } catch (err) {
         console.error(err)
         res.status(500).send('Erro ao fazer login')
-    }
+      }
+      
 })
-
 //Middlewares
 function authMiddleware(req, res, next){
     const auth = req.headers.authorization
@@ -65,7 +64,7 @@ function authMiddleware(req, res, next){
 }
 //Rotas Privadas
 router.get('/private', authMiddleware, (req, res)=>{
-    res.json({message: `Bem-Vindo, ${req.user.nome}`})
+    res.json({message: `Bem-Vindo, ${req.user.username}`})
 })
 
 export default router
