@@ -34,13 +34,14 @@ router.post('/login', async(req, res)=>{
         )
         const user = users[0]
         if (!user) return res.status(400).send('Usuário não encontrado')
-        const valid = await bcrypt.compare(password, user.password)
+            const valid = await bcrypt.compare(password, user.senha)
         if(!valid) return res.status(401).send('Senha Incorreta')
-        const token = jwt.sign(
-            {id: user.id, username: user.username },
-            process.env.JWT_SECRET,
-            {expiresIn:'1h'}
-        )
+            const token = jwt.sign(
+                { id: user.id, username: user.nome },
+                process.env.JWT_SECRET,
+                { expiresIn: '1h' }
+            )
+            
         res.json({token})
     } catch{
         res.status(500).send('Erro ao fazer login')
