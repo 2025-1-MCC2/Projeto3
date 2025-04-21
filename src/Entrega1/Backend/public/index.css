@@ -14,7 +14,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #8E51ED;
+    background: linear-gradient(90deg, #6432A1, #A148DD); /* Gradient from purple to blue */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -29,7 +29,7 @@ header {
     align-items: center;
 }
 
-.nav-buttons a {
+.nav-buttons a:not(.logo-link) {
     text-decoration: none;
     padding: 12px 24px;
     color: white;
@@ -41,7 +41,7 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.nav-buttons a:hover {
+.nav-buttons a:not(.logo-link):hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -52,12 +52,12 @@ header {
 }
 
 /* Botão Sobre, Blog, Fale Conosco */
-.nav-buttons a:not(.cadastro):not(.entrar) {
+.nav-buttons a:not(.cadastro):not(.entrar):not(.logo-link) {
     background-color: rgba(255, 255, 255, 0.1);
     border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-.nav-buttons a:not(.cadastro):not(.entrar):hover {
+.nav-buttons a:not(.cadastro):not(.entrar):not(.logo-link):hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -334,7 +334,7 @@ header {
 /* Estilo Footer */
 
 footer {
-    background-color: #8E51ED;
+    background: linear-gradient(90deg, #6432A1, #A148DD);
     color: white;
     padding: 40px 20px;
     text-align: center;
