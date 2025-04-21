@@ -18,8 +18,8 @@
             <a href="sobre.html">Sobre</a>
             <a href="blog.html">Blog</a>
             <a href="contato.html">Fale Conosco</a>
-            <a href="cadastro.html" class="cadastro">Quero ser criativo</a>
-            <a href="entrar.html" class="entrar">Já tenho cadastro</a>
+            <a href="registro.html" class="cadastro">Quero ser criativo</a>
+            <a href="login.html" class="entrar">Já tenho cadastro</a>
         </nav>
     </header>
 
@@ -33,12 +33,12 @@
                 <div class="auth-body">
                     <div id="message" class="alert alert-error" style="display: none;"></div>
 
-                    <form id="loginForm">
+                    <form action="/api/login" method="post">
                         <div class="form-group">
-                            <label class="form-label">E-mail</label>
+                            <label class="form-label">Nome</label>
                             <div class="input-with-icon">
-                                <i class="fas fa-envelope input-icon"></i>
-                                <input type="email" id="email" class="form-control" placeholder="seu@email.com" required>
+                                <i class="fas fa-user input-icon"></i>
+                                <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite seu nome" required>
                             </div>
                         </div>
 
@@ -46,7 +46,7 @@
                             <label class="form-label">Senha</label>
                             <div class="input-with-icon">
                                 <i class="fas fa-lock input-icon"></i>
-                                <input type="password" id="password" class="form-control" placeholder="Digite sua senha" required>
+                                <input type="password" id="password" name="password" class="form-control" placeholder="Digite sua senha" required>
                                 <i class="fas fa-eye toggle-password" id="togglePassword"></i>
                             </div>
                         </div>
