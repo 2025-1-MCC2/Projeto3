@@ -2,10 +2,9 @@ create database instituto_criativo;
 use instituto_criativo;
 
 create table membro(
-cpf int primary key not null,
-nome varchar(500),
-função varchar(500),
-email varchar(500)
+--cpf int primary key not null,
+nome varchar(500) not null,
+senha varchar(500) not null
 );
 
 create table iniciativa(
