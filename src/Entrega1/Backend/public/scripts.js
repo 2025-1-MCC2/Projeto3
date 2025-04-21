@@ -10,3 +10,4 @@ setInterval(() => {
     counter++;
     carrosselSlide.style.transform = `translateX(${-size * counter}px)`;
 }, 3000);
+
