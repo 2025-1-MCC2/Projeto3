@@ -179,61 +179,8 @@ footer {
         padding: 10px;
         font-size: 14px;
     }
-
-    .banner {
-        padding: 100px 20px;
-    }
-
-    .banner h1 {
-        font-size: 36px;
-    }
-
-    .banner p {
-        font-size: 18px;
-    }
-
-    .impacto-itens {
-        grid-template-columns: 1fr;
-    }
-
-    .impacto-imagem {
-        margin-top: 20px;
-    }
-
-    .membros-1fileira, .membros-2fileira, .membros-3fileira {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .footer-contato, .footer-links {
-        text-align: center;
-    }
-
-    .footer-contato p, .footer-contato a, .footer-links a {
-        justify-content: center;
-    }
-
-    .marcas h1 {
-        font-size: 28px;
-    }
-
-    .marcas-imagem {
-        max-width: 100%;
-    }
 }
 
 @media (max-width: 480px) {
-    .marcas h1 {
-        font-size: 24px;
-    }
 
-    .marcas-imagem img {
-        border-radius: 5px;
-    }
 }
