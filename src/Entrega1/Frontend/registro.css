@@ -1,0 +1,377 @@
+/* Estilo global */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #8E51ED;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 42px;
+}
+
+/* Estilos botoes */
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.nav-buttons a {
+    text-decoration: none;
+    padding: 12px 24px;
+    color: white;
+    border-radius: 15px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nav-buttons a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.nav-buttons a:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão Sobre, Blog, Fale Conosco */
+.nav-buttons a:not(.cadastro):not(.entrar) {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-buttons a:not(.cadastro):not(.entrar):hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Botão Cadastro */
+.nav-buttons .cadastro {
+    background-color: #FC4A45;
+    border: 2px solid #FC4A45;
+}
+
+.nav-buttons .cadastro:hover {
+    background-color: #e63935;
+    border-color: #e63935;
+}
+
+/* Botão Entrar */
+.nav-buttons .entrar {
+    background-color: #008CFF;
+    border: 2px solid #008CFF;
+}
+
+.nav-buttons .entrar:hover {
+    background-color: #0077cc;
+    border-color: #0077cc;
+}
+
+/* Cores texto */
+
+.preto, .azul, .cinza {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.527);
+    font-weight: bold;
+}
+
+.preto {
+    color: #212121;
+    font-size: 52px;
+}
+
+.azul {
+    color: #60f7ff;
+    font-size: 52px;
+}
+
+.cinza {
+    color: #828282;
+    font-size: 26px;
+}
+
+/* Estilo Login */
+.box-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.auth-container {
+    align-self: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 420px;
+    padding: 20px;
+}
+
+.auth-header {
+    padding: 30px;
+    text-align: center;
+}
+
+.auth-title {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.auth-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.auth-body {
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--dark);
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.form-control {
+    width: 80%;
+    padding: 12px 15px 12px 45px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(110, 72, 170, 0.2);
+}
+
+textarea.form-control {
+    width: 80%;
+    padding-left: 0px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    resize: none;
+    transition: all 0.3s;
+}
+
+textarea.form-control:focus {
+    resize: none;
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(110, 72, 170, 0.2);
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gray);
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gray);
+    cursor: pointer;
+}
+
+.btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-primary {
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(110, 72, 170, 0.3);
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 20px;
+    color: var(--gray);
+}
+
+.auth-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-link:hover {
+    text-decoration: underline;
+}
+
+:root {
+    --primary: #8E51ED;
+    --secondary: #9d50bb;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --gray: #6c757d;
+}
+
+/* Mensagens de erro */
+.alert {
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    display: none;
+}
+
+.alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Estilo Footer */
+footer {
+    background-color: #8E51ED;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-contato, .footer-links {
+    flex: 1;
+    min-width: 200px;
+    text-align: left;
+}
+
+.footer-titulo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #FFEA00;
+}
+
+.footer-contato p, .footer-contato a, .footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: opacity 0.3s;
+}
+
+.footer-contato a:hover, .footer-links a:hover {
+    opacity: 0.8;
+}
+
+.footer-direitos {
+    font-size: 14px;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Ícones do Font Awesome */
+.box-login .fas{
+    color: #6c757d;
+}
+
+.box-entrar .fas{
+    color: #FFEA00;
+}
+
+.fab, .fas {
+    font-size: 18px;
+    color: #FFEA00;
+}
+
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+        width: 80%;
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    .nav-buttons a {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-contato, .footer-links {
+        text-align: center;
+    }
+
+    .footer-contato p, .footer-contato a, .footer-links a {
+        justify-content: center;
+    }
+}

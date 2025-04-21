@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://www.institutocriativo.com.br/images/favicon.png" rel="shortcut icon" type="image/x-icon">
-    <title>Login - Instituto Criativo</title>
+    <title>Registro - Instituto Criativo</title>
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
@@ -27,7 +27,7 @@
         <div class="auth-container">
             <div class="auth-card">
                 <div class="auth-header">
-                    <div class="auth-title">Acesse sua conta</div>
+                    <div class="auth-title">Crie sua conta</div>
                 </div>
 
                 <div class="auth-body">
@@ -51,19 +51,35 @@
                             </div>
                         </div>
 
+                        <div class="form-group">
+                            <label class="form-label">Confirmar senha</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-lock input-icon"></i>
+                                <input type="password" id="confirm-password" class="form-control" placeholder="Digite sua senha" required>
+                                <i class="fas fa-eye toggle-password" id="togglePassword"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-descricao">
+                            <label class="form-label">Como quer nos ajudar?</label>
+                            <div class="input-with-icon">
+                                <textarea id="descricao" class="form-control" placeholder="Conte-nos um pouco sobre você" rows="5" required></textarea>
+                            </div>
+                        </div>
+
                         <br>
                         <div class="form-group">
                             <div class="box-entrar">
                                 <button type="submit" class="btn btn-primary">
                                     <i class="fas fa-sign-in-alt"></i>
-                                    Entrar
+                                    Criar conta
                                 </button>
                             </div>
                         </div>
                     </form>
 
                     <div class="auth-footer">
-                        Não tem uma conta? <a href="registro.html" class="auth-link">Cadastre-se</a>
+                        Já possui cadastro? <a href="login.html" class="auth-link">Entrar</a>
                     </div>
                 </div>
             </div>
@@ -92,3 +108,4 @@
         </div>
     </footer>
 </body>
+</html>
