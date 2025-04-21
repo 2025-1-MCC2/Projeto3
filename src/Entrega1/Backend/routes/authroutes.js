@@ -10,13 +10,13 @@ router.post('/register', async(req, res)=>{
     const {username, password} = req.body
     try{
         const [existing] = await db.execute(
-            'SELECT * FROM users WHERE username = ?',
+            'SELECT * FROM membro WHERE nome = ?',
             [username]
         )
         if(existing.length > 0) return res.status(400).send('Usuário já existe')
         const hashed = await bcrypt.hash(password, 10)
         await db.execute(
-            'INSERT INTO users(username, password) VALUES (?,?)',
+            'INSERT INTO membro(nome, senha) VALUES (?,?)',
             [username, hashed]
         )
         res.redirect('/login.html') //Inserir Aspas e barra para redirecionar
@@ -29,7 +29,7 @@ router.post('/login', async(req, res)=>{
     const {username, password} = req.body
     try{
         const [users] = await db.execute(
-            'SELECT * FROM users WHERE username = ?',
+            'SELECT * FROM membro WHERE nome = ?',
             [username] 
         )
         const user = users[0]
