@@ -14,7 +14,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background: linear-gradient(90deg, #6432A1, #A148DD); /* Gradient from purple to blue */
+    background: linear-gradient(90deg, #6432A1, #A148DD);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -123,12 +123,14 @@ header {
 }
 
 .auth-header {
+    color: white;
+    background: linear-gradient(90deg, #6432A1, #A148DD);
     padding: 30px;
     text-align: center;
 }
 
 .auth-title {
-    font-size: 1.2rem;
+    font-size: 16px;
     font-weight: 400;
 }
 
@@ -312,8 +314,8 @@ footer {
     color: #6c757d;
 }
 
-.box-entrar .fas{
-    color: #FFEA00;
+.btn-primary .fas{
+    color: white;
 }
 
 .fab, .fas {

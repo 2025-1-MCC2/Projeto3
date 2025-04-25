@@ -123,12 +123,14 @@ header {
 }
 
 .auth-header {
+    color: white;
+    background: linear-gradient(90deg, #6432A1, #A148DD);
     padding: 30px;
     text-align: center;
 }
 
 .auth-title {
-    font-size: 1.2rem;
+    font-size: 16px;
     font-weight: 400;
 }
 
@@ -174,8 +176,8 @@ header {
 }
 
 textarea.form-control {
-    width: 80%;
-    padding-left: 0px;
+    width: 87%;
+    padding-left: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
     font-size: 1rem;
@@ -197,6 +199,10 @@ textarea.form-control:focus {
     top: 50%;
     transform: translateY(-50%);
     color: var(--gray);
+}
+
+.icon-login {
+    color: white;
 }
 
 .toggle-password {
@@ -330,8 +336,8 @@ footer {
     color: #6c757d;
 }
 
-.box-entrar .fas{
-    color: #FFEA00;
+.btn-primary .fas{
+    color: white;
 }
 
 .fab, .fas {
