@@ -1,12 +1,14 @@
-body {
+*:not(i) {
   font-family: "Poppins", sans-serif;
+}
+
+body {
   background-color: white;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   line-height: 1.6;
 }
-
 
 a:hover {
   opacity: 0.8;

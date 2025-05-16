@@ -1,9 +1,10 @@
 import styled from "styled-components"
+
 export const Botao = styled.button`
     background-color: #c073f3;
     padding: 12px 24px;
     color: white;
-    border:none;
+    border: none;
     border-radius: 15px;
     transition: background-color 0.6s, transform 0.3s, box-shadow 0.9s;
     font-size: 14px;
@@ -17,6 +18,7 @@ export const Botao = styled.button`
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     }
 ` 
+
 export const Botao2 = styled.button`
     background-color: #FC4A45;
     padding: 12px 24px;
@@ -35,6 +37,7 @@ export const Botao2 = styled.button`
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
 ` 
+
 export const Botao3 = styled.button`
     background-color: #008CFF;
     padding: 12px 24px;
@@ -61,6 +64,7 @@ export const Formulario = styled.form`
     max-width:300px;
     margin: 0 auto;
 `
+
 export const Input = styled.input`
     padding:8px;
     border: 1px solid #ccc;
