@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const Botao = styled.button`
+export const BotaoHeader = styled.button`
     background-color: #c073f3;
     padding: 12px 24px;
     color: white;
@@ -19,7 +19,7 @@ export const Botao = styled.button`
     }
 ` 
 
-export const Botao2 = styled.button`
+export const BotaoCadastro = styled.button`
     background-color: #FC4A45;
     padding: 12px 24px;
     color: white;
@@ -38,7 +38,7 @@ export const Botao2 = styled.button`
     }
 ` 
 
-export const Botao3 = styled.button`
+export const BotaoLogin = styled.button`
     background-color: #008CFF;
     padding: 12px 24px;
     color: white;
@@ -75,8 +75,8 @@ export const Erro = styled.span`
     color: red;
     font-size:12px;
 `
-export const BotaoHome = styled.button`
-    background-color:rgba(139, 138, 138, 0.6);
+export const BotaoBanner = styled.button`
+    background-color:rgba(235, 235, 235, 0.6);
     padding: 12px 24px;
     color: white;
     border-color: white;

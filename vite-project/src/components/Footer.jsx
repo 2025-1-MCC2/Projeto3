@@ -22,14 +22,14 @@ export default function Footer() {
         margin: '0 20px'
         }}>
             <div>
-                <p style={{color:' #FFEA00', fontWeight: 'bold'}}>Contato</p>
+                <p style={{fontWeight: 'bold', fontSize: '20px'}}>Contato</p>
                 <p><i className="fas fa-phone-alt"></i> WhatsApp e telefone</p>
                 <Link to="https://api.whatsapp.com/send?phone=5511910747492" style={{textDecoration: 'none', color: 'white'}}>
                     <i className="fab fa-whatsapp"></i> (11) 91074-7492
                 </Link>
             </div>
             <div>
-                <p>Links Rápidos</p>
+                <p style={{color:' #FFEA00', fontWeight: 'bold', fontSize: '20px'}}>Links Rápidos</p>
                 <Link to="/" style={{textDecoration: 'none', color: 'white'}}>
                     <p><i className="fas fa-home"></i> Home</p>
                 </Link>
