@@ -12,7 +12,7 @@ export default function Home() {
           backgroundPosition: 'center',
           padding: '150px 20px',
           color: 'white',
-          textShadow: '3px 3px 5px rgba(0, 0, 0, 0.5)',
+          textShadow: '3px 3px 5px rgba(0, 0, 0, 0.75)',
           textAlign: 'left',
           position: 'relative'
         }}>
