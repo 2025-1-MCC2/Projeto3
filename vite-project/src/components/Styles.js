@@ -13,8 +13,8 @@ export const Botao = styled.button`
     cursor: pointer;
     &:hover {
         transform: translateY(-3px);
-        background-color:#c073f3;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        background-color:rgb(152, 73, 204);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     }
 ` 
 export const Botao2 = styled.button`
@@ -31,7 +31,7 @@ export const Botao2 = styled.button`
     cursor: pointer;
     &:hover {
         transform: translateY(-3px);
-        background-color: #e63935;
+        background-color:rgb(236, 21, 17);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
 ` 
