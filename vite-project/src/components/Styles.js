@@ -60,6 +60,7 @@ export const BotaoLogin = styled.button`
 export const Formulario = styled.form`
     display:flex;
     flex-direction:column;
+    padding: 30px;
     gap:12px;
     max-width:300px;
     margin: 0 auto;
@@ -76,7 +77,7 @@ export const Erro = styled.span`
     font-size:12px;
 `
 export const BotaoBanner = styled.button`
-    background-color:rgba(235, 235, 235, 0.6);
+    background-color:rgba(182, 182, 182, 0.6);
     padding: 12px 24px;
     color: white;
     border-color: white;
