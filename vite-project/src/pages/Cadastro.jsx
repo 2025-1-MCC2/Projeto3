@@ -1,6 +1,6 @@
 import { Formulario, Input, Botao, Erro } from "../components/Styles";
 import { useState } from 'react'
-
+import {Link} from 'react-router-dom'
 
 export default function Cadastro(){
     const [nome, setNome] = useState('')
@@ -34,6 +34,9 @@ export default function Cadastro(){
                 onChange={(e) => setEmail(e.target.value)} 
             />
             {erro && <Erro>{erro}</Erro>}
+            <Link to="/login">
+                <p style={{textAlign : 'center'}}>Ou faça o Login</p>
+            </Link>
             <Botao type="submit">Enviar</Botao>
         </Formulario>
         </>

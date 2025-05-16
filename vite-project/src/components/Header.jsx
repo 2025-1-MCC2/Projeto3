@@ -12,9 +12,9 @@ export default function Header() {
         boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
       }}>
 
-        <a href="/">
+        <Link to="/">
             <img src="./public/imagens/logo/LogoTextoInstitutoBranco.png" alt="Instituto Criativo" width="252" height="42"></img>
-        </a>
+        </Link>
         <h1 style={{ margin: 0 }}></h1>
         <nav style={{ display: 'flex', gap: '1rem' }}>
           <Link to="/sobre">
