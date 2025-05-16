@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom'
-import {Botao, Botao2, Botao3} from './Styles';
+import {BotaoHeader, BotaoCadastro, BotaoLogin} from './Styles';
 export default function Header() {
     return (
       <header style={{
@@ -18,16 +18,16 @@ export default function Header() {
         <h1 style={{ margin: 0 }}></h1>
         <nav style={{ display: 'flex', gap: '1rem' }}>
           <Link to="/sobre">
-            <Botao href="/sobre">Sobre</Botao>
+            <BotaoHeader>Sobre</BotaoHeader>
           </Link>
           <Link to="/blog">
-          <Botao href ="/blog">Blog</Botao>
+            <BotaoHeader>Blog</BotaoHeader>
           </Link>  
           <Link to="/cadastro">
-          <Botao2 href ="/cadastro">Cadastro</Botao2>
+            <BotaoCadastro>Cadastro</BotaoCadastro>
           </Link>
           <Link to="/login">
-          <Botao3 href="/login">Login</Botao3>
+            <BotaoLogin>Login</BotaoLogin>
           </Link>
         </nav>
       </header>
