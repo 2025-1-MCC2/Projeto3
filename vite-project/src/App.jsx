@@ -6,7 +6,6 @@ import Sobre from './pages/Sobre';
 import Cadastro from './pages/Cadastro';
 import Login from './pages/Login';
 import Blog from './pages/Blog';
-import Footer from './components/Footer'
 
 export default function App() {
   return (
@@ -19,7 +18,6 @@ export default function App() {
         <Route path="/login" element={<Login/>} />
         <Route path="/blog" element={<Blog/>} />
       </Routes>
-      <Footer />{}
       <Footer/>{}
     </BrowserRouter>
   );
