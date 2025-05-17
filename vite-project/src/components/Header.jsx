@@ -13,7 +13,7 @@ export default function Header() {
       }}>
 
         <Link to="/">
-            <img src="./public/imagens/logo/LogoTextoInstitutoBranco.png" alt="Instituto Criativo" width="252" height="42"></img>
+            <img src="./imagens/logo/LogoTextoInstitutoBranco.png" alt="Instituto Criativo" width="252" height="42"></img>
         </Link>
         <h1 style={{ margin: 0 }}></h1>
         <nav style={{ display: 'flex', gap: '1rem' }}>
