@@ -25,13 +25,14 @@ export default function CadastroEvento({ onEventoAdicionado }) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          nome,
-          data_evento: dataEvento,
-          participantes: Number(participantes),
-          colaboradores: Number(colaboradores),
-          local,
-          foto_url: fotoUrl || null
-        }),
+            nome,
+            data: dataEvento,
+            num_participantes: Number(participantes),
+            colaboradores: Number(colaboradores),
+            local_evento: local,
+            foto_evento: fotoUrl || null
+          })
+          
       })
 
       if (!res.ok) {
