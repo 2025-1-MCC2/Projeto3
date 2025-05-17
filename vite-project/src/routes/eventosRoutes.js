@@ -3,28 +3,29 @@ import db from '../db.js'
 
 const router = express.Router()
 
-const { nome, data, num_participantes, colaboradores, local_evento, foto_evento } = req.body
+router.post('/eventos', async (req, res) => {
+  const { nome, data_evento, participante, colaborador, local_evento, foto_url } = req.body
 
-if (!nome || !data || !num_participantes || !colaboradores || !local_evento) {
-  return res.status(400).send('Campos obrigatórios faltando')
-}
-
-try {
-  await db.execute(
-    `INSERT INTO eventos (nome, data, num_participantes, colaboradores, local_evento, foto_evento)
-     VALUES (?, ?, ?, ?, ?, ?)`,
-    [nome, data, num_participantes, colaboradores, local_evento, foto_evento]
-  )
-  res.status(201).send('Evento criado com sucesso')
-} catch (error) {
-  console.error('Erro ao inserir evento:', error)
-  res.status(500).send('Erro interno ao criar evento')
-}
-
+  if (!nome || !data_evento || !participante || !colaborador || !local_evento) {
+    return res.status(400).send('Campos obrigatórios faltando')
+  }
+  
+  try {
+    await db.execute(
+      `INSERT INTO eventos (nome, data_evento, participante, colaborador, local_evento, foto_url)
+       VALUES (?, ?, ?, ?, ?, ?)`,
+      [nome, data_evento, participante, colaborador, local_evento, foto_url]
+    )
+    res.status(201).send('Evento criado com sucesso')
+  } catch (error) {
+    console.error('Erro ao inserir evento:', error)
+    res.status(500).send(`Erro interno ao criar evento: ${error.message}`)
+  }
+})
 
 router.get('/eventos', async (req, res) => {
   try {
-    const [rows] = await db.execute('SELECT * FROM eventos ORDER BY data_evento DESC')
+    const [rows] = await db.execute('SELECT * FROM eventos ORDER BY data DESC')
     res.json(rows)
   } catch (error) {
     console.error('Erro ao buscar eventos:', error)

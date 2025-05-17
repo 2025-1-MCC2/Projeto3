@@ -3,8 +3,8 @@ import React, { useState } from 'react'
 export default function CadastroEvento({ onEventoAdicionado }) {
   const [nome, setNome] = useState('')
   const [dataEvento, setDataEvento] = useState('')
-  const [participantes, setParticipantes] = useState('')
-  const [colaboradores, setColaboradores] = useState('')
+  const [participante, setParticipante] = useState('')
+  const [colaborador, setColaborador] = useState('')
   const [local, setLocal] = useState('')
   const [fotoUrl, setFotoUrl] = useState('')
   const [erro, setErro] = useState('')
@@ -15,7 +15,7 @@ export default function CadastroEvento({ onEventoAdicionado }) {
     setErro('')
     setSucesso('')
 
-    if (!nome || !dataEvento || !participantes || !colaboradores || !local) {
+    if (!nome || !dataEvento || !participante || !colaborador || !local) {
       setErro('Preencha todos os campos obrigatórios.')
       return
     }
@@ -25,14 +25,13 @@ export default function CadastroEvento({ onEventoAdicionado }) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-            nome,
-            data: dataEvento,
-            num_participantes: Number(participantes),
-            colaboradores: Number(colaboradores),
-            local_evento: local,
-            foto_evento: fotoUrl || null
-          })
-          
+          nome,
+          data_evento: dataEvento,
+          participante: Number(participante),
+          colaborador: Number(colaborador),
+          local_evento: local,
+          foto_url: fotoUrl || null  // corrigido aqui
+        })
       })
 
       if (!res.ok) {
@@ -43,8 +42,8 @@ export default function CadastroEvento({ onEventoAdicionado }) {
       setSucesso('Evento cadastrado com sucesso!')
       setNome('')
       setDataEvento('')
-      setParticipantes('')
-      setColaboradores('')
+      setParticipante('')
+      setColaborador('')
       setLocal('')
       setFotoUrl('')
 
@@ -53,6 +52,7 @@ export default function CadastroEvento({ onEventoAdicionado }) {
       setErro(err.message)
     }
   }
+  
 
   return (
     <form onSubmit={handleSubmit} style={{ maxWidth: 400, margin: '20px auto', fontFamily: 'Arial, sans-serif' }}>
@@ -80,16 +80,16 @@ export default function CadastroEvento({ onEventoAdicionado }) {
       <label>Número de Participantes*</label><br />
       <input
         type="number"
-        value={participantes}
-        onChange={e => setParticipantes(e.target.value)}
+        value={participante}
+        onChange={e => setParticipante(e.target.value)}
         required
       /><br /><br />
 
       <label>Número de Colaboradores*</label><br />
       <input
         type="number"
-        value={colaboradores}
-        onChange={e => setColaboradores(e.target.value)}
+        value={colaborador}
+        onChange={e => setColaborador(e.target.value)}
         required
       /><br /><br />
 
