@@ -25,7 +25,7 @@ router.post('/eventos', async (req, res) => {
 
 router.get('/eventos', async (req, res) => {
   try {
-    const [rows] = await db.execute('SELECT * FROM eventos ORDER BY data DESC')
+    const [rows] = await db.execute('SELECT * FROM eventos ORDER BY data_evento DESC')
     res.json(rows)
   } catch (error) {
     console.error('Erro ao buscar eventos:', error)
@@ -33,4 +33,4 @@ router.get('/eventos', async (req, res) => {
   }
 })
 
-export default router
+export default router 
