@@ -61,7 +61,7 @@ export default function CadastroEvento({ onEventoAdicionado }) {
       justifyContent: 'center',
       margin: '2% auto',
       }}>
-      <h2>Cadastrar Novo Evento</h2>
+      <h2 style={{textAlign: 'center'}}>Cadastrar Novo Evento</h2>
 
       {erro && <p style={{ color: 'red' }}>{erro}</p>}
       {sucesso && <p style={{ color: 'green' }}>{sucesso}</p>}
