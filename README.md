@@ -68,10 +68,11 @@ Para abrir este projeto você necessita das seguintes ferramentas:
 -<a href="https://godotengine.org/download">GODOT</a>
 
 ```sh
-make install
-npm test
-Coloque código do prompt de comnando se for necessário
+cd vite-project/
+npm run dev
+npx nodemon src/server.js
 ```
+ http://localhost:5173/
 
 ## 📋 Licença/License
 Utilize o link <https://chooser-beta.creativecommons.org/> para fazer uma licença CC BY 4.0.

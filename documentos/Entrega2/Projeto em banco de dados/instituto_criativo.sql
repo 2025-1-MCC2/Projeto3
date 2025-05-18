@@ -2,33 +2,38 @@ create database instituto_criativo;
 use instituto_criativo;
 
 create table membro(
---cpf int primary key not null,
-nome varchar(500) not null,
-senha varchar(500) not null
+id int primary key auto_increment,
+nome varchar(255) not null,
+email varchar(255) not null,
+senha varchar(255)not null
 );
-
-create table iniciativa(
-codigo int primary key auto_increment not null,
-nome varchar(500),
-situação varchar(500),
-data_inciativa date
+CREATE TABLE eventos (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(255) NOT NULL,
+  data_evento DATE NOT NULL,
+  participante INT DEFAULT 0,
+  colaborador INT DEFAULT 0,
+  foto_url VARCHAR(500),
+  local_evento VARCHAR(255)
 );
 
 create table participacao(
   data_participacao date,
-  codigo_iniciativa int,
-  cpf_membro int,
-  primary key (cpf_membro, codigo_inciativa),
-  constraint `fk_codigo_iniciativa` foreign key (codigo_iniciativa) references iniciativa(codigo),
-  constraint `fk_cpf_membro` foreign key (cpf_membro) references membro(cpf)
+  id_evento int,
+  id_membro int,
+  primary key (id_membro, id_evento),
+  constraint `fk_id_evento` foreign key (id_evento) references eventos(id),
+  constraint `fk_id_membro` foreign key (id_membro) references membro(id)
 );
 
 create table relatorio(
 id int primary key auto_increment,
 data_relatorio date,
-parametro varchar(5000),
-codigo_iniciativa int,
-constraint `fk_codigo_iniciativa1` foreign key (codigo_iniciativa) references iniciativa(codigo)
+objetivo varchar(5000),
+progresso float,
+observacao varchar(5000),
+id_evento int,
+constraint `fk_id_evento` foreign key (id_evento) references eventos(id)
 );
 
 create table kpi(
@@ -38,10 +43,11 @@ descricao varchar(5000),
 valor float
 );
 
-CREATE TABLE mede (
+/* CREATE TABLE mede (
 id_relatorio int,
 id_kpi int,
+progresso float,
 primary key (id_relatorio, id_kpi),
 constraint `fk_id_relatorio`foreign key (id_relatorio) references relatorio(id),
 constraint `fk_id_kpi` foreign key (id_kpi) references kpi(id)
-);
+); *

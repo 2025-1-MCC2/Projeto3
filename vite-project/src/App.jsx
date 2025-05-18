@@ -25,3 +25,4 @@ export default function App() {
     </BrowserRouter>
   );
 }
+// para rodar o front end: npm run dev

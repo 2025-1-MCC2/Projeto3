@@ -19,3 +19,6 @@ app.use('/api', eventosRoutes);
 app.listen(port, ()=>{
     console.log(`Servidor Rodando em: http://localhost:${port}`)
 })
+
+// cd vite-project/
+// para rodar o back end: npx nodemon src/server.js
