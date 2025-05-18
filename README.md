@@ -40,7 +40,7 @@ O Dashboard Institucional é uma plataforma de gestão inteligente desenvolvida 
 ---
 
 ## 📂 Estrutura de Pastas
-
+```
 📦 Projeto
 ├── 📂 documentos  
 │   ├── 📂 Entrega 1  
