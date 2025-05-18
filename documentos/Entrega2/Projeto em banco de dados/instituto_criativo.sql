@@ -7,6 +7,7 @@ nome varchar(255) not null,
 email varchar(255) not null,
 senha varchar(255)not null
 );
+
 CREATE TABLE eventos (
   id INT AUTO_INCREMENT PRIMARY KEY,
   nome VARCHAR(255) NOT NULL,
@@ -26,6 +27,7 @@ create table participacao(
   constraint `fk_id_membro` foreign key (id_membro) references membro(id)
 );
 
+
 create table relatorio(
 id int primary key auto_increment,
 data_relatorio date,
@@ -43,11 +45,15 @@ descricao varchar(5000),
 valor float
 );
 
-/* CREATE TABLE mede (
+create table progresso(
 id_relatorio int,
 id_kpi int,
-progresso float,
+resultado float, /* resultado do evento */,
+meta float, /* meta da empresa */
 primary key (id_relatorio, id_kpi),
-constraint `fk_id_relatorio`foreign key (id_relatorio) references relatorio(id),
+constraint `fk_id_relatorio` foreign key (id_relatorio) references relatorio(id),
 constraint `fk_id_kpi` foreign key (id_kpi) references kpi(id)
-); *
+constraint `fk_meta` foreign key (meta) references kpi(valor)
+constraint `fk_resultado` foreign key (resultado) references relatorio(progresso)
+);
+
