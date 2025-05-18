@@ -61,7 +61,7 @@ export default function CadastroEvento({ onEventoAdicionado }) {
       {erro && <p style={{ color: 'red' }}>{erro}</p>}
       {sucesso && <p style={{ color: 'green' }}>{sucesso}</p>}
 
-      <label>Nome do Evento*</label><br />
+      <label>Nome do Evento<span style={{color: 'red'}}>*</span></label><br />
       <input
         type="text"
         value={nome}
@@ -69,7 +69,7 @@ export default function CadastroEvento({ onEventoAdicionado }) {
         required
       /><br /><br />
 
-      <label>Data do Evento*</label><br />
+      <label>Data do Evento<span style={{color: 'red'}}>*</span></label><br />
       <input
         type="date"
         value={dataEvento}
@@ -77,7 +77,7 @@ export default function CadastroEvento({ onEventoAdicionado }) {
         required
       /><br /><br />
 
-      <label>Número de Participantes*</label><br />
+      <label>Número de Participantes<span style={{color: 'red'}}>*</span></label><br />
       <input
         type="number"
         value={participante}
@@ -85,7 +85,7 @@ export default function CadastroEvento({ onEventoAdicionado }) {
         required
       /><br /><br />
 
-      <label>Número de Colaboradores*</label><br />
+      <label>Número de Colaboradores<span style={{color: 'red'}}>*</span></label><br />
       <input
         type="number"
         value={colaborador}
@@ -93,7 +93,7 @@ export default function CadastroEvento({ onEventoAdicionado }) {
         required
       /><br /><br />
 
-      <label>Local*</label><br />
+      <label>Local<span style={{color: 'red'}}>*</span></label><br />
       <input
         type="text"
         value={local}
@@ -101,7 +101,7 @@ export default function CadastroEvento({ onEventoAdicionado }) {
         required
       /><br /><br />
 
-      <label>URL da Foto (opcional)</label><br />
+      <label>URL da Foto (Opcional)</label><br />
       <input
         type="url"
         value={fotoUrl}
