@@ -3,6 +3,7 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import routes from './routes.js'
 import eventosRoutes from './routes/eventosRoutes.js';
+import relatorioRoutes from './routes/relatorioRoutes.js';
 
 dotenv.config()
 const app = express()
@@ -15,6 +16,7 @@ app.use(express.urlencoded({ extended: true })) //permite envio por forms com ac
 app.use(express.static('public')) //Adicione isso para servir os HTMLs
 app.use('/api', routes)
 app.use('/api', eventosRoutes);
+app.use('/api', relatorioRoutes);
 
 app.listen(port, ()=>{
     console.log(`Servidor Rodando em: http://localhost:${port}`)

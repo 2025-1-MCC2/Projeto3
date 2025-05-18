@@ -9,6 +9,7 @@ import Login from './pages/Login';
 import Blog from './pages/Blog';
 import Eventos from './pages/Eventos.jsx'
 import AreaColaborador from './pages/AreaColaborador.jsx'
+import Relatorio from './pages/Relatorio.jsx';
 
 export default function App() {
   return (
@@ -21,7 +22,8 @@ export default function App() {
         <Route path="/login" element={<Login/>} />
         <Route path="/blog" element={<Blog/>} />
         <Route path="/eventos" element={<Eventos />} />
-        <Route path="/areacolaborador" element={<AreaColaborador />} /> 
+        <Route path="/areacolaborador" element={<AreaColaborador />} /> \
+        <Route path="/relatorio" element={<Relatorio />} />
 
       </Routes>
       <Footer/>{}
