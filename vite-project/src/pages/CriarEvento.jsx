@@ -81,8 +81,7 @@ export default function CadastroEvento({ onEventoAdicionado }) {
           borderRadius: '5px',
           maxWidth: '100%',
           width: '100%',
-        }}
-      /><br /><br />
+        }}/><br /><br />
 
       <label>Data do Evento<span style={{color: 'red'}}>*</span></label><br />
       <input

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { BotaoHeader } from '../components/Styles'
 
 export default function Relatorio() {
   const [formData, setFormData] = useState({
@@ -91,7 +92,15 @@ export default function Relatorio() {
   }
 
   return (
-    <div style={{ maxWidth: 600, margin: '2rem auto', padding: 20, border: '1px solid #ccc', borderRadius: 8 }}>
+    <div 
+    style={{
+      maxWidth: 400,
+      justifyContent: 'center',
+      margin: '2% auto',
+      padding: '20px',
+      border: '1px solid #2c2c2c',
+      borderRadius: '15px',
+      }}>
       <h2>Cadastrar Relatório</h2>
       <form onSubmit={handleSubmit}>
         <div>
@@ -102,6 +111,13 @@ export default function Relatorio() {
             value={formData.data_relatorio}
             onChange={handleChange}
             required
+            style={{
+            padding: '4px 0 4px 4px',
+            border: '1px solid #2c2c2c',
+            borderRadius: '5px',
+            maxWidth: '100%',
+            width: '100%',
+            }}
           />
         </div>
         <div>
@@ -112,6 +128,14 @@ export default function Relatorio() {
             value={formData.objetivo}
             onChange={handleChange}
             required
+            style={{
+            padding: '4px 0 4px 4px',
+            border: '1px solid #2c2c2c',
+            borderRadius: '5px',
+            maxWidth: '100%',
+            width: '100%',
+            resize: 'none'
+            }}
           />
         </div>
         <div>
@@ -125,6 +149,13 @@ export default function Relatorio() {
             value={formData.progresso}
             onChange={handleChange}
             required
+            style={{
+            padding: '4px 0 4px 4px',
+            border: '1px solid #2c2c2c',
+            borderRadius: '5px',
+            maxWidth: '100%',
+            width: '100%',
+            }}
           />
         </div>
         <div>
@@ -135,6 +166,14 @@ export default function Relatorio() {
             value={formData.observacao}
             onChange={handleChange}
             required
+            style={{
+            padding: '4px 0 4px 4px',
+            border: '1px solid #2c2c2c',
+            borderRadius: '5px',
+            maxWidth: '100%',
+            width: '100%',
+            resize: 'none'
+            }}
           />
         </div>
         <div>
@@ -145,19 +184,26 @@ export default function Relatorio() {
             value={formData.id_evento}
             onChange={handleChange}
             required
+            style={{
+            padding: '4px 0 4px 4px',
+            border: '1px solid #2c2c2c',
+            borderRadius: '5px',
+            maxWidth: '100%',
+            width: '100%',
+            }}
           />
         </div>
         <br />
-        <button type="submit">Enviar</button>
+        <BotaoHeader type="submit">Enviar</BotaoHeader>
       </form>
 
       {message && <p style={{ marginTop: 10 }}>{message}</p>}
 
       <hr style={{ margin: '2rem 0' }} />
 
-      <button onClick={toggleRelatorios}>
+      <BotaoHeader onClick={toggleRelatorios}>
         {mostrarRelatorios ? 'Ocultar Relatórios Anteriores' : 'Ver Relatórios Anteriores'}
-      </button>
+      </BotaoHeader>
 
       {mostrarRelatorios && (
         <div style={{ marginTop: '1rem' }}>
