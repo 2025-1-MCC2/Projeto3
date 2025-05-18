@@ -99,7 +99,6 @@ O Dashboard Institucional é uma plataforma de gestão inteligente desenvolvida 
 1. **Clone o repositório**
    ```sh
    git clone https://github.com/2025-1-MCC2/Projeto3.git
-   cd seu-repositorio
    ```
 
 2. **Acesse a pasta vite-project**
