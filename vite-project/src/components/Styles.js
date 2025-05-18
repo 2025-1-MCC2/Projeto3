@@ -81,6 +81,7 @@ export const BotaoBanner = styled.button`
     padding: 12px 24px;
     color: white;
     border: 3px solid rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border-radius: 15px;
     transition: background-color 0.6s, transform 0.3s, box-shadow 0.9s;
     font-size: 14px;
