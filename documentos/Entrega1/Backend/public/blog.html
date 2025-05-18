@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://www.institutocriativo.com.br/images/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <title>Instituto Criativo - Educação criativa e inovadora</title>
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html" class="logo-link">
+                <img src="imagens/logo/LogoTextoInstitutoBranco.png" alt="Instituto Criativo" width="252" height="42">
+            </a>
+        </div>
+        <nav class="nav-buttons">
+            <a href="sobre.html">Sobre</a>
+            <a href="blog.html">Blog</a>
+            <a href="contato.html">Fale Conosco</a>
+            <a href="registro.html" class="cadastro">Quero ser criativo</a>
+            <a href="login.html" class="entrar">Já tenho cadastro</a>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <div class="banner-content">
+            <h1>Blog</h1>
+            <p>Artigos, pesquisas e reflexões sobre educação, tecnologia e inovação no ensino.</p>
+        </div>
+    </section>
+
+    <section class="posts">
+        <h1>Todos os posts</h1>
+        
+        <div class="posts-controls">
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" id="post-search" placeholder="Pesquisar posts...">
+            </div>
+            
+            <div class="filter-dropdown">
+                <button class="filter-btn">
+                    <i class="fas fa-filter"></i>
+                    Filtrar
+                </button>
+                <div class="filter-options">
+                    <label><input type="checkbox" name="filter" value="tecnologia" checked> Tecnologia</label>
+                    <label><input type="checkbox" name="filter" value="metodologia" checked> Metodologia</label>
+                    <label><input type="checkbox" name="filter" value="curriculo" checked> Currículo</label>
+                    <label><input type="checkbox" name="filter" value="inclusao" checked> Inclusão</label>
+                    <label><input type="checkbox" name="filter" value="evento" checked> Evento</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="posts-grid">
+            <!-- Post 1 - IA na Educação -->
+            <article class="post-card" data-category="tecnologia">
+                <img src="https://source.unsplash.com/random/600x400/?ai,education" alt="IA na Educação" class="post-image">
+                <div class="post-content">
+                    <div class="post-meta">
+                        <span class="post-date">01/05/2025 - 10:00 às 18:00</span>
+                        <span class="post-category tecnologia">TECNOLOGIA</span>
+                    </div>
+                    <h2 class="post-title">Como a Inteligência Artificial está revolucionando a educação</h2>
+                    <p class="post-excerpt">Explore as novas ferramentas de IA que estão transformando a forma como ensinamos e aprendemos.</p>
+                    <div class="post-footer">
+                        <a href="#" class="read-more">Leia Mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Post 2 - Gamificação -->
+            <article class="post-card" data-category="tecnologia">
+                <img src="https://source.unsplash.com/random/600x400/?gamification,education" alt="Gamificação" class="post-image">
+                <div class="post-content">
+                    <div class="post-meta">
+                        <span class="post-date">01/05/2025 - 10:00 às 18:00</span>
+                        <span class="post-category tecnologia">TECNOLOGIA</span>
+                    </div>
+                    <h2 class="post-title">Gamificação na Educação</h2>
+                    <p class="post-subtitle">Como transformar o aprendizado em jogo</p>
+                    <p class="post-excerpt">Descubra como elementos de jogos podem aumentar o engajamento dos alunos e melhorar os resultados de aprendizagem.</p>
+                    <div class="post-footer">
+                        <a href="#" class="read-more">Leia Mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Post 3 - Palestra -->
+            <article class="post-card" data-category="metodologia">
+                <img src="https://source.unsplash.com/random/600x400/?lecture,mind" alt="Palestra" class="post-image">
+                <div class="post-content">
+                    <div class="post-meta">
+                        <span class="post-date">01/05/2025 - 10:00 às 18:00</span>
+                        <span class="post-category metodologia">METODOLOGIA</span>
+                    </div>
+                    <h2 class="post-title">Palestra</h2>
+                    <p class="post-excerpt">Palestra sobre desbloqueio do poder da mente na Prodam, empresa de tecnologia e comunicação de São Paulo.</p>
+                    <div class="post-footer">
+                        <a href="#" class="read-more">Leia Mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Post 4 - Maratona de Programação -->
+            <article class="post-card" data-category="evento">
+                <img src="https://source.unsplash.com/random/600x400/?programming,event" alt="Maratona" class="post-image">
+                <div class="post-content">
+                    <div class="post-meta">
+                        <span class="post-date">01/05/2025 - 10:00 às 18:00</span>
+                        <span class="post-category evento">EVENTO</span>
+                    </div>
+                    <h2 class="post-title">O instituto apoia competidores em maratona de programação!</h2>
+                    <p class="post-excerpt">Evento de programação promovido pelo Instituto Criativo com participação de diversos competidores.</p>
+                    <div class="post-footer">
+                        <a href="#" class="read-more">Leia Mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Post 5 - BNCC -->
+            <article class="post-card" data-category="curriculo">
+                <img src="https://source.unsplash.com/random/600x400/?curriculum,education" alt="BNCC" class="post-image">
+                <div class="post-content">
+                    <div class="post-meta">
+                        <span class="post-date">01/05/2025 - 10:00 às 18:00</span>
+                        <span class="post-category curriculo">CURRÍCULO</span>
+                    </div>
+                    <h2 class="post-title">BNCC na Prática</h2>
+                    <p class="post-subtitle">Implementando as competências gerais</p>
+                    <p class="post-excerpt">Guia prático para implementar as competências da Base Nacional Comum Curricular.</p>
+                    <div class="post-footer">
+                        <a href="#" class="read-more">Leia Mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Post 6 - IA na Educação (Inclusão) -->
+            <article class="post-card" data-category="inclusao">
+                <img src="https://source.unsplash.com/random/600x400/?inclusion,education" alt="Inclusão" class="post-image">
+                <div class="post-content">
+                    <div class="post-meta">
+                        <span class="post-date">01/05/2025 - 10:00 às 18:00</span>
+                        <span class="post-category inclusao">INCLUSÃO</span>
+                    </div>
+                    <h2 class="post-title">IA revolucionando a educação inclusiva</h2>
+                    <p class="post-excerpt">Como a Inteligência Artificial está ajudando a criar ambientes de aprendizagem mais inclusivos.</p>
+                    <div class="post-footer">
+                        <a href="#" class="read-more">Leia Mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="highlights">
+    <div class="container">
+        <h1 class="section-title"><i class="fas fa-star"></i> Destaques do Mês</h1>
+        
+        <div class="highlight-cards">
+            <!-- Card 1 - Evento -->
+            <div class="highlight-card">
+                <div class="card-header">
+                    <h2 class="card-title"><i class="fas fa-calendar-alt"></i> Evento</h2>
+                    <ul class="card-links">
+                        <li><a href="#">Workshop de Inovação Educacional →</a></li>
+                    </ul>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-subtitle">Como aplicar Design Thinking em sala de aula</h3>
+                    <p class="card-text">Evento gratuito com certificado para educadores. Com especialistas do MIT e UNESCO. </p>
+                    <p class="card-tags">Inscrições abertas até 30/06</p>
+                    <div class="card-footer">
+                        <span class="card-date">25/07/2025</span>
+                        <a href="#" class="cta-button">Garantir Vaga</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 2 - Pesquisa -->
+            <div class="highlight-card">
+                <div class="card-header">
+                    <h2 class="card-title"><i class="fas fa-chart-pie"></i> Pesquisa</h2>
+                    <ul class="card-links">
+                        <li><a href="#">Resultados da pesquisa "Educação 2030"→</a></li>
+                    </ul>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-subtitle">86% dos professores adotaram IA em 2025</h3>
+                    <p class="card-text">Dados coletados em 5 países mostram o impacto da tecnologia nas escolas.</p>
+                    <div class="card-footer">
+                        <span class="card-tags">24 páginas</span>
+                        <a href="#" class="cta-button secondary">Ler agora</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 3 - Prêmio -->
+            <div class="highlight-card">
+                <div class="card-header">
+                    <h2 class="card-title"><i class="fas fa-trophy"></i> Conquista</h2>
+                    <ul class="card-links">
+                        <li><a href="#">Prêmio Educação 4.0 →</a></li>
+                    </ul>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-subtitle">Melhor ONG de Inovação Educacional</h3>
+                    <p class="card-text">Reconhecimento pela UNESCO por nosso trabalho em comunidades.</p>
+                    <div class="card-footer">
+                        <span class="card-date">05/06/2025</span>
+                        <a href="#" class="cta-button">Ver Reportagem</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-contato">
+                <p class="footer-titulo">Contato</p>
+                <p><i class="fas fa-phone-alt"></i> WhatsApp e telefone</p>
+                <a href="https://api.whatsapp.com/send?phone=5511910747492">
+                    <i class="fab fa-whatsapp"></i> (11) 91074-7492
+                </a>
+            </div>
+            <div class="footer-links">
+                <p class="footer-titulo">Links Rápidos</p>
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a>
+                <a href="blog.html"><i class="fas fa-blog"></i> Blog</a>
+                <a href="contato.html"><i class="fas fa-envelope"></i> Fale Conosco</a>
+            </div>
+        </div>
+        <div class="footer-direitos">
+            <p>© 2025 Instituto Criativo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Filtro de posts
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterCheckboxes = document.querySelectorAll('.filter-options input[type="checkbox"]');
+            const postCards = document.querySelectorAll('.post-card');
+            
+            filterCheckboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', filterPosts);
+            });
+            
+            function filterPosts() {
+                const activeFilters = Array.from(filterCheckboxes)
+                    .filter(checkbox => checkbox.checked)
+                    .map(checkbox => checkbox.value);
+                
+                postCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    if (activeFilters.length === 0 || activeFilters.includes(cardCategory)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+            
+            // Procurar posts
+            const searchInput = document.getElementById('post-search');
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                postCards.forEach(card => {
+                    const title = card.querySelector('.post-title').textContent.toLowerCase();
+                    const excerpt = card.querySelector('.post-excerpt').textContent.toLowerCase();
+                    
+                    if (title.includes(searchTerm) || excerpt.includes(searchTerm)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

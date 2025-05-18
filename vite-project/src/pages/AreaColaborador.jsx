@@ -11,7 +11,7 @@ export default function AreaColaborador() {
 
         }}>
             <h1>Área do Colaborador</h1>
-            <p>Bem-vindo à área do colaborador!<br></br> Clique no botão abaixo para visualizar os eventos.</p>
+            <p>Bem-vindo à área do colaborador!<br></br> Clique nos botões abaixo para visualizar outras páginas.</p>
             <div style={{
                 display: "flex",
                 flexDirection: "row",
@@ -19,8 +19,20 @@ export default function AreaColaborador() {
                 margin: "3% 0",
                 gap: "15px",
             }}>
+                <Link to="/dashboard">
+                    <BotaoHeader>Dashboard</BotaoHeader>
+                </Link>
                 <Link to="/eventos">
                     <BotaoHeader>Eventos</BotaoHeader>
+                </Link>
+                <Link to="/participacoes">
+                    <BotaoHeader>Participações</BotaoHeader>
+                </Link>
+                <Link to="/relatorios">
+                    <BotaoHeader>Relatórios</BotaoHeader>
+                </Link>
+                <Link to="/kpi">
+                    <BotaoHeader>Medidores KPI</BotaoHeader>
                 </Link>
             </div>
         </div>
