@@ -60,6 +60,9 @@ export default function CadastroEvento({ onEventoAdicionado }) {
       maxWidth: 400,
       justifyContent: 'center',
       margin: '2% auto',
+      padding: '20px',
+      border: '1px solid #2c2c2c',
+      borderRadius: '15px',
       }}>
       <h2 style={{textAlign: 'center'}}>Cadastrar Novo Evento</h2>
 
@@ -73,7 +76,7 @@ export default function CadastroEvento({ onEventoAdicionado }) {
         onChange={e => setNome(e.target.value)}
         required
         style={{
-          padding: '3px',
+          padding: '4px 0 4px 4px',
           border: '1px solid #2c2c2c',
           borderRadius: '5px',
           maxWidth: '100%',
@@ -88,7 +91,7 @@ export default function CadastroEvento({ onEventoAdicionado }) {
         onChange={e => setDataEvento(e.target.value)}
         required
         style={{
-          padding: '3px',
+          padding: '4px 0 4px 4px',
           border: '1px solid #2c2c2c',
           borderRadius: '5px',
           maxWidth: '100%',
@@ -103,7 +106,7 @@ export default function CadastroEvento({ onEventoAdicionado }) {
         onChange={e => setParticipante(e.target.value)}
         required
         style={{
-          padding: '3px',
+          padding: '4px 0 4px 4px',
           border: '1px solid #2c2c2c',
           borderRadius: '5px',
           maxWidth: '100%',
@@ -118,7 +121,7 @@ export default function CadastroEvento({ onEventoAdicionado }) {
         onChange={e => setColaborador(e.target.value)}
         required
         style={{
-          padding: '3px',
+          padding: '4px 0 4px 4px',
           border: '1px solid #2c2c2c',
           borderRadius: '5px',
           maxWidth: '100%',
@@ -133,7 +136,7 @@ export default function CadastroEvento({ onEventoAdicionado }) {
         onChange={e => setLocal(e.target.value)}
         required
         style={{
-          padding: '3px',
+          padding: '4px 0 4px 4px',
           border: '1px solid #2c2c2c',
           borderRadius: '5px',
           maxWidth: '100%',
@@ -148,7 +151,7 @@ export default function CadastroEvento({ onEventoAdicionado }) {
         onChange={e => setFotoUrl(e.target.value)}
         placeholder="https://exemplo.com/foto.jpg"
         style={{
-          padding: '3px',
+          padding: '4px 0 4px 4px',
           border: '1px solid #2c2c2c',
           borderRadius: '5px',
           maxWidth: '100%',
