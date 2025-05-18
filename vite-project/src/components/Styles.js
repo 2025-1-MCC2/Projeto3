@@ -4,7 +4,7 @@ export const BotaoHeader = styled.button`
     background-color: #c073f3;
     padding: 12px 24px;
     color: white;
-    border: none;
+    border: 3px solid rgba(255, 255, 255, 0.6);
     border-radius: 15px;
     transition: background-color 0.6s, transform 0.3s, box-shadow 0.9s;
     font-size: 14px;
@@ -23,7 +23,7 @@ export const BotaoCadastro = styled.button`
     background-color: #FC4A45;
     padding: 12px 24px;
     color: white;
-    border:none;
+    border: 3px solid rgba(255, 255, 255, 0.6);
     border-radius: 15px;
     transition: background-color 0.6s, transform 0.3s, box-shadow 0.9s;
     font-size: 14px;
@@ -42,7 +42,7 @@ export const BotaoLogin = styled.button`
     background-color: #008CFF;
     padding: 12px 24px;
     color: white;
-    border:none;
+    border: 3px solid rgba(255, 255, 255, 0.6);
     border-radius: 15px;
     transition: background-color 0.6s, transform 0.3s, box-shadow 0.9s;
     font-size: 14px;
@@ -80,17 +80,16 @@ export const BotaoBanner = styled.button`
     background-color:rgba(182, 182, 182, 0.6);
     padding: 12px 24px;
     color: white;
-    border-color: white;
+    border: 3px solid rgb(255, 255, 255);
     border-radius: 15px;
     transition: background-color 0.6s, transform 0.3s, box-shadow 0.9s;
     font-size: 14px;
     font-weight: 500;
     text-align: center;
-    border:none;
     cursor: pointer;
     &:hover {
         transform: translateY(-3px);
-        background-color:rgb(65, 167, 33);
+        background-color:rgba(144, 144, 144, 0.6);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
 `

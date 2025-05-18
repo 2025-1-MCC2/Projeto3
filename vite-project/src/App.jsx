@@ -27,10 +27,6 @@ export default function App() {
       <Footer/>{}
     </BrowserRouter>
   );
-  
-  
-  
-
 }
 
 

@@ -12,7 +12,7 @@ export default function VisualizarEventos() {
   }, [])
 
   return (
-    <div style={{ maxWidth: 600, margin: '20px auto', fontFamily: 'Arial' }}>
+    <div style={{ maxWidth: 400, margin: '2% auto'}}>
       <h2>Eventos Cadastrados</h2>
       {erro && <p style={{ color: 'red' }}>{erro}</p>}
       {eventos.length === 0 ? (
@@ -20,14 +20,21 @@ export default function VisualizarEventos() {
       ) : (
         <ul>
           {eventos.map(evento => (
-            <li key={evento.id}>
+            <li key={evento.id} 
+              style={{
+              padding: '3px',
+              border: '1px solid #2c2c2c',
+              borderRadius: '5px',
+              maxWidth: '100%',
+              width: '100%',
+              }}>
               <strong>{evento.nome}</strong><br />
               Data: {new Date(evento.data_evento).toLocaleDateString()}<br />
               Participantes: {evento.participante}<br />
               Colaboradores: {evento.colaborador}<br />
               Local: {evento.local_evento}<br />
               {evento.foto_url && (
-                <img src={evento.foto_url} alt="Foto do evento" width="200" />
+                <img src={evento.foto_url} alt="Foto do evento" width="300" />
               )}
               <hr />
             </li>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { BotaoHeader } from '../components/Styles'
 
 export default function CadastroEvento({ onEventoAdicionado }) {
   const [nome, setNome] = useState('')
@@ -55,7 +56,11 @@ export default function CadastroEvento({ onEventoAdicionado }) {
   
 
   return (
-    <form onSubmit={handleSubmit} style={{ maxWidth: 400, margin: '20px auto', fontFamily: 'Arial, sans-serif' }}>
+    <form onSubmit={handleSubmit} style={{
+      maxWidth: 400,
+      justifyContent: 'center',
+      margin: '2% auto',
+      }}>
       <h2>Cadastrar Novo Evento</h2>
 
       {erro && <p style={{ color: 'red' }}>{erro}</p>}
@@ -67,6 +72,13 @@ export default function CadastroEvento({ onEventoAdicionado }) {
         value={nome}
         onChange={e => setNome(e.target.value)}
         required
+        style={{
+          padding: '3px',
+          border: '1px solid #2c2c2c',
+          borderRadius: '5px',
+          maxWidth: '100%',
+          width: '100%',
+        }}
       /><br /><br />
 
       <label>Data do Evento<span style={{color: 'red'}}>*</span></label><br />
@@ -75,6 +87,13 @@ export default function CadastroEvento({ onEventoAdicionado }) {
         value={dataEvento}
         onChange={e => setDataEvento(e.target.value)}
         required
+        style={{
+          padding: '3px',
+          border: '1px solid #2c2c2c',
+          borderRadius: '5px',
+          maxWidth: '100%',
+          width: '100%',
+        }}
       /><br /><br />
 
       <label>Número de Participantes<span style={{color: 'red'}}>*</span></label><br />
@@ -83,6 +102,13 @@ export default function CadastroEvento({ onEventoAdicionado }) {
         value={participante}
         onChange={e => setParticipante(e.target.value)}
         required
+        style={{
+          padding: '3px',
+          border: '1px solid #2c2c2c',
+          borderRadius: '5px',
+          maxWidth: '100%',
+          width: '100%',
+        }}
       /><br /><br />
 
       <label>Número de Colaboradores<span style={{color: 'red'}}>*</span></label><br />
@@ -91,6 +117,13 @@ export default function CadastroEvento({ onEventoAdicionado }) {
         value={colaborador}
         onChange={e => setColaborador(e.target.value)}
         required
+        style={{
+          padding: '3px',
+          border: '1px solid #2c2c2c',
+          borderRadius: '5px',
+          maxWidth: '100%',
+          width: '100%',
+        }}
       /><br /><br />
 
       <label>Local<span style={{color: 'red'}}>*</span></label><br />
@@ -99,6 +132,13 @@ export default function CadastroEvento({ onEventoAdicionado }) {
         value={local}
         onChange={e => setLocal(e.target.value)}
         required
+        style={{
+          padding: '3px',
+          border: '1px solid #2c2c2c',
+          borderRadius: '5px',
+          maxWidth: '100%',
+          width: '100%',
+        }}
       /><br /><br />
 
       <label>URL da Foto (Opcional)</label><br />
@@ -107,11 +147,18 @@ export default function CadastroEvento({ onEventoAdicionado }) {
         value={fotoUrl}
         onChange={e => setFotoUrl(e.target.value)}
         placeholder="https://exemplo.com/foto.jpg"
+        style={{
+          padding: '3px',
+          border: '1px solid #2c2c2c',
+          borderRadius: '5px',
+          maxWidth: '100%',
+          width: '100%',
+        }}
       /><br /><br />
 
-      <button type="submit" style={{ padding: '8px 16px', cursor: 'pointer' }}>
+      <BotaoHeader type="submit" style={{ padding: '8px 16px', cursor: 'pointer' }}>
         Salvar Evento
-      </button>
+      </BotaoHeader>
     </form>
   )
 }
