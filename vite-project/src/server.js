@@ -5,8 +5,8 @@ import routes from './routes.js'
 import eventosRoutes from './routes/eventosRoutes.js';
 import relatorioRoutes from './routes/relatorioRoutes.js';
 import kpiRoutes from './routes/kpiRoutes.js';
-import participanteRoutes from './routes/participanteRoutes.js';
-
+import participacaoRoutes from './routes/participacaoRoutes.js';
+import progressoRoutes from './routes/progressoRoutes.js';
 
 dotenv.config()
 const app = express()
@@ -21,7 +21,8 @@ app.use('/api', routes)
 app.use('/api', eventosRoutes);
 app.use('/api', relatorioRoutes);
 app.use('/api', kpiRoutes);
-app.use('/api', participanteRoutes);
+app.use('/api', participacaoRoutes);
+app.use('/api', progressoRoutes);
 
 app.listen(port, ()=>{
     console.log(`Servidor Rodando em: http://localhost:${port}`)
