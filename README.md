@@ -32,9 +32,11 @@ O Dashboard Institucional é uma plataforma de gestão inteligente desenvolvida 
 
 | Área               | Tecnologias                    |
 |--------------------|--------------------------------|
-| Frontend           | React + Vite, Tailwind CSS     |
+| Frontend           | React + Vite, CSS              |
 | Backend            | .NET                           |
 | Banco de Dados     | MySQL                          |
+| Gerenciamento de Estado | Context API                |
+| Gráficos e Visualizações | Recharts                 |
 | Outras Ferramentos | ESLint, Prettier, PostCSS      |
 
 ---
@@ -67,14 +69,13 @@ O Dashboard Institucional é uma plataforma de gestão inteligente desenvolvida 
 │   └── 📄 Documentação.docx  
 ├── 📂 vite-project
 │   ├── 📂 imagens 
-│   ├── 📂 backend          
-│   ├── 📂 public          
+│   ├── 📂 middlewares          
+│   ├── 📂 node_modules          
 │   ├── 📂 src              
 │   │   ├── 📂 assets      
 │   │   ├── 📂 components  
 │   │   ├── 📂 pages      
-│   │   ├── 📂 routes     
-│   │   ├── 📂 utility     
+│   │   ├── 📂 routes          
 │   │   ├── 📄 App.jsx      
 │   │   ├── 📄 index.css    
 │   │   └── 📄 main.jsx     
@@ -99,11 +100,12 @@ O Dashboard Institucional é uma plataforma de gestão inteligente desenvolvida 
 1. **Clone o repositório**
    ```sh
    git clone https://github.com/2025-1-MCC2/Projeto3.git
+   cd vite-project
    ```
 
-2. **Acesse a pasta vite-project**
+2. **Instale as dependências**
    ```sh
-   cd vite-project/
+   npm install
    ```
 
 3. **Inicie o servidor de desenvolvimento**
