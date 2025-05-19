@@ -1,5 +1,0 @@
-paleta do site:
-
-roxo - 6D28D9
-vermelho - FC4A45
-verde - 52CD51
