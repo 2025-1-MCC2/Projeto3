@@ -34,6 +34,9 @@ export default function AreaColaborador() {
                 <Link to="/kpi">
                     <BotaoHeader>Medidores KPI</BotaoHeader>
                 </Link>
+                <Link to="/progresso">
+                    <BotaoHeader>Progresso</BotaoHeader>
+                </Link>
             </div>
         </div>
 

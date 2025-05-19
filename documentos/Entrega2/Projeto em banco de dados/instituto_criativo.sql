@@ -19,10 +19,10 @@ CREATE TABLE eventos (
 );
 
 create table participacao(
+  id int primary key auto_increment,
   data_participacao date,
   id_evento_participado int,
   id_membro int,
-  primary key (id_membro, id_evento_participado),
   constraint `fk_id_evento_participado` foreign key (id_evento_participado) references eventos(id),
   constraint `fk_id_membro` foreign key (id_membro) references membro(id)
 );
@@ -46,11 +46,11 @@ valor float
 );
 
 create table progresso(
+id int primary key auto_increment,
 id_relatorio int,
 id_kpi int,
 resultado float, 
 meta float, 
-primary key (id_relatorio, id_kpi),
 constraint `fk_id_relatorio` foreign key (id_relatorio) references relatorio(id),
 constraint `fk_id_kpi` foreign key (id_kpi) references kpi(id)
 );

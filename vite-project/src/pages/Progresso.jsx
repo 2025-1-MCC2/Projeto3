@@ -6,11 +6,13 @@ export default function Progresso() {
         id_relatorio: '',
         id_kpi: '',
         resultado: '',
-        meta: ''
+        meta: '',
+        id: undefined // para editar
     });
     const [message, setMessage] = useState('');
     const [progresso, setProgresso] = useState([]);
     const [mostrarProgresso, setMostrarProgresso] = useState(false);
+    
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -40,29 +42,44 @@ export default function Progresso() {
             meta: parseFloat(formData.meta)
         };
 
-        console.log('Enviando payload:', payload); // Debug
-
         try {
-            const res = await fetch('http://localhost:3000/api/progresso', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload)
-            });
+            let res;
+            if (formData.id) {
+                // Atualizar
+                res = await fetch(`http://localhost:3000/api/progresso/${formData.id}`, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+            } else {
+                // Criar
+                res = await fetch('http://localhost:3000/api/progresso', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+            }
 
             if (res.ok) {
-                setMessage('Progresso criado com sucesso!');
+                setMessage(formData.id ? 'Progresso atualizado com sucesso!' : 'Progresso criado com sucesso!');
                 setFormData({
                     id_relatorio: '',
                     id_kpi: '',
                     resultado: '',
-                    meta: ''
+                    meta: '',
+                    id: undefined
                 });
+                // Atualizar lista
+                const res2 = await fetch('http://localhost:3000/api/progresso');
+                const data = await res2.json();
+                setProgresso(data);
+                setMostrarProgresso(true);
             } else {
-                setMessage('Erro ao criar progresso');
+                setMessage(formData.id ? 'Erro ao atualizar progresso' : 'Erro ao criar progresso');
             }
         } catch (error) {
-            console.error('Erro ao criar progresso:', error);
-            setMessage('Erro ao criar progresso');
+            console.error('Erro:', error);
+            setMessage('Erro ao salvar progresso');
         }
     };
 
@@ -78,6 +95,36 @@ export default function Progresso() {
     };
 
     const handleFecharProgresso = () => {
+        setMostrarProgresso(false);
+    };
+
+    const handleDeletar = async (id) => {
+        try {
+            const res = await fetch(`http://localhost:3000/api/progresso/${id}`, {
+                method: 'DELETE',
+            });
+
+            if (res.ok) {
+                setMessage('Progresso deletado com sucesso');
+                setProgresso(progresso.filter(item => item.id !== id));
+            } else {
+                setMessage('Erro ao deletar progresso');
+            }
+        } catch (error) {
+            console.error('Erro ao deletar progresso:', error);
+            setMessage('Erro ao deletar progresso');
+        }
+    };
+
+    const handleEditar = (item) => {
+        setFormData({
+            id_relatorio: item.id_relatorio.toString(),
+            id_kpi: item.id_kpi.toString(),
+            resultado: item.resultado.toString(),
+            meta: item.meta.toString(),
+            id: item.id
+        });
+        setMessage('Editando progresso ID ' + item.id);
         setMostrarProgresso(false);
     };
 
@@ -105,12 +152,12 @@ export default function Progresso() {
             padding: '0 20px 20px 20px',
             border: '1px solid #2c2c2c',
             borderRadius: '15px',
-            }}>
+        }}>
             <h1>Progresso</h1>
             <form onSubmit={handleSubmit} style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '10px',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '10px',
             }}>
                 <input
                     type="text"
@@ -168,18 +215,22 @@ export default function Progresso() {
                         width: '100%',
                     }}
                 />
-                <BotaoHeader type="submit" style={{maxWidth: '50%'}}>Registrar Progresso</BotaoHeader>
+                <BotaoHeader type="submit" style={{ maxWidth: '50%' }}>
+                    {formData.id ? 'Atualizar Progresso' : 'Registrar Progresso'}
+                </BotaoHeader>
             </form>
             {message && <p>{message}</p>}
-            <BotaoHeader onClick={handleMostrarProgresso} style={{maxWidth: '50%'}}>Mostrar Progresso</BotaoHeader>
+            <BotaoHeader onClick={handleMostrarProgresso} style={{ maxWidth: '50%' }}>Mostrar Progresso</BotaoHeader>
             {mostrarProgresso && (
                 <div>
                     <h2>Progresso</h2>
-                    <BotaoCadastro onClick={handleFecharProgresso}>Fechar</BotaoCadastro>
+                    <button onClick={handleFecharProgresso}>Fechar</button>
                     <ul>
                         {progresso.map(item => (
-                            <li key={`${item.id_relatorio}-${item.id_kpi}`}>
-                                ID Relatório: {item.id_relatorio}, ID KPI: {item.id_kpi}, Resultado: {item.resultado}, Meta: {item.meta}
+                            <li key={item.id} style={{ marginBottom: '8px' }}>
+                                ID Relatório: {item.id_relatorio}, ID KPI: {item.id_kpi}, Resultado: {item.resultado}, Meta: {item.meta}{' '}
+                                <button onClick={() => handleEditar(item)}>Editar</button>{' '}
+                                <button onClick={() => handleDeletar(item.id)}>Excluir</button>
                             </li>
                         ))}
                     </ul>
