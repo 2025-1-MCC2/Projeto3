@@ -77,7 +77,10 @@ O Dashboard Institucional é uma plataforma de gestão inteligente desenvolvida 
 │   │   ├── 📂 pages      
 │   │   ├── 📂 routes          
 │   │   ├── 📄 App.jsx      
-│   │   ├── 📄 index.css    
+│   │   ├── 📄 index.css
+│   │   ├── 📄 db.js
+│   │   ├── 📄 routes.js
+│   │   ├── 📄 server.js          
 │   │   └── 📄 main.jsx     
 │   ├── 📄 index.html            
 │   ├── 📄 package.json             
