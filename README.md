@@ -117,8 +117,9 @@ O Dashboard Institucional é uma plataforma de gestão inteligente desenvolvida 
    npm run dev
    ```
 
-4. **Conecte com o banco de dados:**
+4. **Conecte com o banco de dados(em outro terminal):**
    ```sh
+   cd vite-project
    npx nodemon src/server.js
    ```
 
