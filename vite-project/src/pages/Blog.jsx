@@ -14,7 +14,6 @@ export default function Blog() {
   const [searchTerm, setSearchTerm] = useState('');
 
   // Dados dos posts do blog
-  // Dentro do componente Blog.jsx, atualize o array de posts:
 const posts = [
   {
     id: 1,
