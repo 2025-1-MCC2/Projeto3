@@ -94,4 +94,13 @@ export const BotaoBanner = styled.button`
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
 `
-
+export const LogoAnimada = styled.img`
+  width: 252px;
+  height: 42px;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+`
+;
