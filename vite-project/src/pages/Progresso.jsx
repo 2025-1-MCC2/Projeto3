@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { BotaoHeader } from '../components/Styles';
 
 export default function Progresso() {
     const [formData, setFormData] = useState({
@@ -94,15 +95,36 @@ export default function Progresso() {
     }, []);
 
     return (
-        <div>
+        <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            maxWidth: 700,
+            gap: '10px',
+            justifyContent: 'center',
+            margin: '2% auto',
+            padding: '0 20px 20px 20px',
+            border: '1px solid #2c2c2c',
+            borderRadius: '15px',
+            }}>
             <h1>Progresso</h1>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '10px',
+            }}>
                 <input
                     type="text"
                     name="id_relatorio"
                     value={formData.id_relatorio}
                     onChange={handleChange}
                     placeholder="ID do Relatório"
+                    style={{
+                        padding: '4px 0 4px 4px',
+                        border: '1px solid #2c2c2c',
+                        borderRadius: '5px',
+                        maxWidth: '100%',
+                        width: '100%',
+                    }}
                 />
                 <input
                     type="text"
@@ -110,6 +132,13 @@ export default function Progresso() {
                     value={formData.id_kpi}
                     onChange={handleChange}
                     placeholder="ID do KPI"
+                    style={{
+                        padding: '4px 0 4px 4px',
+                        border: '1px solid #2c2c2c',
+                        borderRadius: '5px',
+                        maxWidth: '100%',
+                        width: '100%',
+                    }}
                 />
                 <input
                     type="number"
@@ -117,6 +146,13 @@ export default function Progresso() {
                     value={formData.resultado}
                     onChange={handleChange}
                     placeholder="Resultado"
+                    style={{
+                        padding: '4px 0 4px 4px',
+                        border: '1px solid #2c2c2c',
+                        borderRadius: '5px',
+                        maxWidth: '100%',
+                        width: '100%',
+                    }}
                 />
                 <input
                     type="number"
@@ -124,15 +160,22 @@ export default function Progresso() {
                     value={formData.meta}
                     onChange={handleChange}
                     placeholder="Meta"
+                    style={{
+                        padding: '4px 0 4px 4px',
+                        border: '1px solid #2c2c2c',
+                        borderRadius: '5px',
+                        maxWidth: '100%',
+                        width: '100%',
+                    }}
                 />
-                <button type="submit">Registrar Progresso</button>
+                <BotaoHeader type="submit" style={{maxWidth: '50%'}}>Registrar Progresso</BotaoHeader>
             </form>
             {message && <p>{message}</p>}
-            <button onClick={handleMostrarProgresso}>Mostrar Progresso</button>
+            <BotaoHeader onClick={handleMostrarProgresso} style={{maxWidth: '50%'}}>Mostrar Progresso</BotaoHeader>
             {mostrarProgresso && (
                 <div>
                     <h2>Progresso</h2>
-                    <button onClick={handleFecharProgresso}>Fechar</button>
+                    <BotaoCadastro onClick={handleFecharProgresso}>Fechar</BotaoCadastro>
                     <ul>
                         {progresso.map(item => (
                             <li key={`${item.id_relatorio}-${item.id_kpi}`}>

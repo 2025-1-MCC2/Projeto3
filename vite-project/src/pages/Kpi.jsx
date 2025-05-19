@@ -83,6 +83,9 @@ export default function Kpi() {
     }, [])
     return (
         <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '10px',
             maxWidth: 700,
             justifyContent: 'center',
             margin: '2% auto',
@@ -90,7 +93,7 @@ export default function Kpi() {
             border: '1px solid #2c2c2c',
             borderRadius: '15px',
             }}>
-            <h1 style={{textAlign: 'center'}}>Cadastro de KPI</h1>
+            <h1>Cadastro de KPI</h1>
             <form onSubmit={handleSubmit} style={{
             display: 'flex',
             flexDirection: 'column',
@@ -145,7 +148,7 @@ export default function Kpi() {
                         }}
                     />
                 </label>
-                <BotaoHeader type="submit" style={{width: '50%', margin: '3% 0'}}>Criar KPI</BotaoHeader>
+                <BotaoHeader type="submit" style={{width: '50%'}}>Criar KPI</BotaoHeader>
             </form>
             {message && <p>{message}</p>}
             <BotaoHeader onClick={handleMostrarKpis} style={{width: '50%'}}>Mostrar KPIs</BotaoHeader>
