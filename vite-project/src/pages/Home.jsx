@@ -16,6 +16,16 @@ export default function Home() {
           textAlign: 'left',
           position: 'relative'
         }}>
+           {/* Overlay escuro */}
+        <div style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        backgroundColor: 'rgba(0, 0, 0, 0.33)',
+        zIndex: 0
+          }}></div>
         <div style={{position: 'relative', zIndex: '1', maxWidth: '600px'}}>
             <h1 style={{fontSize: '48px', margin: '0', lineHeight: '1.2'}}>Educação criativa e<br></br>inovadora</h1>
             <p style={{fontSize: '24px', margin: '10px 0 20px'}}>O Instituto Criativo é uma ONG que nasceu<br></br>para transformar a vida das pessoas.</p>
@@ -23,6 +33,7 @@ export default function Home() {
               <BotaoBanner>Quero ser criativo</BotaoBanner>
             </Link>
         </div>
+        
         </section>
 
         {/* --- Impactos Sociais --- */}
