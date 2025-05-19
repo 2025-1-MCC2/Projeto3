@@ -77,32 +77,42 @@ export default function Dashboard() {
   if (error) return <div className="error">{error}</div>;
 
   return (
-    <div className="dashboard-container">
+    <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            maxWidth: 700,
+            gap: '10px',
+            justifyContent: 'center',
+            margin: '2% auto',
+            padding: '0 20px 20px 20px',
+            border: '1px solid #2c2c2c',
+            borderRadius: '15px',
+            }}>
       <h1>Dashboard Instituto Criativo</h1>
       
       {/* Seção de Resumo */}
-      <div className="summary-cards">
-        <div className="card">
+      <div>
+        <div>
           <h3>Total de Eventos</h3>
           <p>{totalEventos}</p>
         </div>
-        <div className="card">
+        <div >
           <h3>Participações</h3>
           <p>{totalParticipacoes}</p>
         </div>
-        <div className="card">
+        <div>
           <h3>Relatórios</h3>
           <p>{relatorios.length}</p>
         </div>
-        <div className="card">
+        <div>
           <h3>KPIs Monitorados</h3>
           <p>{kpis.length}</p>
         </div>
       </div>
 
       {/* Gráficos */}
-      <div className="charts-row">
-        <div className="chart-container">
+      <div>
+        <div>
           <h3>Eventos por Mês</h3>
           <BarChart width={400} height={300} data={chartData}>
             <CartesianGrid strokeDasharray="3 3" />
@@ -114,7 +124,7 @@ export default function Dashboard() {
           </BarChart>
         </div>
 
-        <div className="chart-container">
+        <div>
           <h3>Progresso de KPIs</h3>
           <BarChart width={400} height={300} data={kpiProgressData}>
             <CartesianGrid strokeDasharray="3 3" />
@@ -129,11 +139,11 @@ export default function Dashboard() {
       </div>
 
       {/* Seção de Eventos Recentes */}
-      <div className="section">
+      <div>
         <h2>Próximos/Últimos Eventos</h2>
-        <div className="eventos-grid">
+        <div>
           {eventosRecentes.map(evento => (
-            <div key={evento.id} className="evento-card">
+            <div key={evento.id}>
               <h3>{evento.nome}</h3>
               <p><strong>Data:</strong> {new Date(evento.data_evento).toLocaleDateString()}</p>
               <p><strong>Local:</strong> {evento.local_evento}</p>
@@ -145,13 +155,13 @@ export default function Dashboard() {
       </div>
 
       {/* Seção de Relatórios */}
-      <div className="section">
+      <div>
         <h2>Últimos Relatórios</h2>
-        <div className="relatorios-list">
+        <div>
           {relatorios.slice(0, 3).map(relatorio => {
             const eventoRelacionado = eventos.find(e => e.id === relatorio.id_evento);
             return (
-              <div key={relatorio.id} className="relatorio-card">
+              <div key={relatorio.id}>
                 <h3>Relatório #{relatorio.id}</h3>
                 <p><strong>Data:</strong> {new Date(relatorio.data_relatorio).toLocaleDateString()}</p>
                 {eventoRelacionado && <p><strong>Evento:</strong> {eventoRelacionado.nome}</p>}
