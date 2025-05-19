@@ -13,7 +13,7 @@ import Relatorio from './pages/Relatorio.jsx'
 import PrivateRoute from './components/PrivateRoute'
 import Kpi from './pages/Kpi.jsx'
 import Participacao from './pages/Participacao.jsx'
-
+import Dashboard from './pages/Dashboard.jsx'
 
 import Progresso from './pages/Progresso.jsx'
 
@@ -31,7 +31,8 @@ export default function App() {
         <Route path="/areacolaborador" element={<PrivateRoute><AreaColaborador /></PrivateRoute>} /> \
         <Route path="/relatorio" element={ <PrivateRoute> <Relatorio/> </PrivateRoute> }/>
         <Route path="/kpi" element={ <PrivateRoute> <Kpi/> </PrivateRoute> }/>
-        <Route path="/participacao" element={ <Participacao/> }/>
+        <Route path="/dashboard" element={ <PrivateRoute> <Dashboard/> </PrivateRoute> }/>
+        <Route path="/participacao" element={ <PrivateRoute> <Participacao/> </PrivateRoute> }/>
         <Route path="/progresso" element={ <PrivateRoute> <Progresso/> </PrivateRoute> }/>
 
       </Routes>
