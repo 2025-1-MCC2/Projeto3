@@ -20,10 +20,10 @@ CREATE TABLE eventos (
 
 create table participacao(
   data_participacao date,
-  id_evento int,
+  id_evento_participado int,
   id_membro int,
-  primary key (id_membro, id_evento),
-  constraint `fk_id_evento` foreign key (id_evento) references eventos(id),
+  primary key (id_membro, id_evento_participado),
+  constraint `fk_id_evento_participado` foreign key (id_evento_participado) references eventos(id),
   constraint `fk_id_membro` foreign key (id_membro) references membro(id)
 );
 

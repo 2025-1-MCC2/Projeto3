@@ -9,8 +9,9 @@ import Login from './pages/Login';
 import Blog from './pages/Blog';
 import Eventos from './pages/Eventos.jsx'
 import AreaColaborador from './pages/AreaColaborador.jsx'
-import Relatorio from './pages/Relatorio.jsx';
-
+import Relatorio from './pages/Relatorio.jsx'
+import PrivateRoute from './components/PrivateRoute'
+import Kpi from './pages/Kpi.jsx'
 export default function App() {
   return (
     <BrowserRouter>
@@ -21,10 +22,10 @@ export default function App() {
         <Route path="/cadastro" element={<Cadastro/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/blog" element={<Blog/>} />
-        <Route path="/eventos" element={<Eventos />} />
-        <Route path="/areacolaborador" element={<AreaColaborador />} /> \
-        <Route path="/relatorio" element={<Relatorio />} />
-
+        <Route path="/eventos" element={<PrivateRoute><Eventos /></PrivateRoute>} />
+        <Route path="/areacolaborador" element={<PrivateRoute><AreaColaborador /></PrivateRoute>} /> \
+        <Route path="/relatorio" element={ <PrivateRoute> <Relatorio/> </PrivateRoute> }/>
+        <Route path="/kpi" element={ <PrivateRoute> <Kpi/> </PrivateRoute> }/>
       </Routes>
       <Footer/>{}
     </BrowserRouter>

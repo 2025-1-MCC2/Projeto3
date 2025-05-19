@@ -4,7 +4,7 @@ import dotenv from 'dotenv'
 import routes from './routes.js'
 import eventosRoutes from './routes/eventosRoutes.js';
 import relatorioRoutes from './routes/relatorioRoutes.js';
-
+import kpiRoutes from './routes/kpiRoutes.js';
 dotenv.config()
 const app = express()
 const port = process.env.PORT || 3000
@@ -17,6 +17,7 @@ app.use(express.static('public')) //Adicione isso para servir os HTMLs
 app.use('/api', routes)
 app.use('/api', eventosRoutes);
 app.use('/api', relatorioRoutes);
+app.use('/api', kpiRoutes);
 
 app.listen(port, ()=>{
     console.log(`Servidor Rodando em: http://localhost:${port}`)
