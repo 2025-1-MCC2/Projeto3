@@ -28,7 +28,7 @@ export default function AreaColaborador() {
                 <Link to="/participacoes">
                     <BotaoHeader>Participações</BotaoHeader>
                 </Link>
-                <Link to="/relatorios">
+                <Link to="/relatorio">
                     <BotaoHeader>Relatórios</BotaoHeader>
                 </Link>
                 <Link to="/kpi">
