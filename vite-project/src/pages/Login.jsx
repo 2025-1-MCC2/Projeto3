@@ -25,7 +25,7 @@ export default function Login(){
             if(res.ok){
                 const data = await res.json()
                 localStorage.setItem('token', data.token)
-                navigate('/dashboard')  // redireciona para a página de dashboard
+                navigate('/areacolaborador')  // redireciona para a página de dashboard
             } else {
                 const msg = await res.text()
                 setErro(msg) // mostra erro na tela

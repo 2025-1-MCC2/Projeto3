@@ -12,6 +12,7 @@ import AreaColaborador from './pages/AreaColaborador.jsx'
 import Relatorio from './pages/Relatorio.jsx'
 import PrivateRoute from './components/PrivateRoute'
 import Kpi from './pages/Kpi.jsx'
+import Participacao from './pages/Participacao.jsx'
 export default function App() {
   return (
     <BrowserRouter>
@@ -26,6 +27,7 @@ export default function App() {
         <Route path="/areacolaborador" element={<PrivateRoute><AreaColaborador /></PrivateRoute>} /> \
         <Route path="/relatorio" element={ <PrivateRoute> <Relatorio/> </PrivateRoute> }/>
         <Route path="/kpi" element={ <PrivateRoute> <Kpi/> </PrivateRoute> }/>
+        <Route path="/participacao" element={ <PrivateRoute> <Participacao/> </PrivateRoute> }/>
       </Routes>
       <Footer/>{}
     </BrowserRouter>

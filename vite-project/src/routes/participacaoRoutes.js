@@ -3,35 +3,35 @@ import db from '../db.js'
 
 const router = express.Router()
 
-router.post('/progresso', async (req, res) => {
-  const {data_limite, descricao, valor } = req.body
+router.post('/participacao', async (req, res) => {
+  const {data_participacao, id_evento_participado, id_membro } = req.body
 
-  if ( !data_limite || !descricao || !valor ) {
+  if ( !data_participacao || !id_evento_participado|| !id_membro ) {
     return res.status(400).send('Campos obrigatórios faltando')
   }
   
   
   try {
     await db.execute(
-      `INSERT INTO progresso ( data_limite, descricao, valor)
+      `INSERT INTO participacao ( data_participacao, id_evento_participado, id_membro)
        VALUES (?, ?, ?)`,
-      [ data_limite, descricao, valor]
+      [ data_participacao, id_evento_participado, id_membro]
     )
-    res.status(201).send('progresso registrado com sucesso')
+    res.status(201).send('participação registrada com sucesso')
 
   } catch (error) {
-    console.error('Erro ao registrar progresso:', error)
+    console.error('Erro ao registrar participação:', error)
     res.status(500).send(error.stack)
 
   }
 })
 // Rota para buscar todos os relatórios
-router.get('/progresso', async (req, res) => {
+router.get('/participacao', async (req, res) => {
     try {
-      const [rows] = await db.execute('SELECT * FROM kpi ORDER BY id DESC')
+      const [rows] = await db.execute('SELECT * FROM participacao ORDER BY data_participacao DESC')
       res.json(rows)
     } catch (error) {
-      console.error('Erro ao buscar kpi:', error)
+      console.error('Erro ao buscar participação:', error)
       res.status(500).send('Erro no servidor')
     }
   })
