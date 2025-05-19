@@ -31,10 +31,7 @@ export default function App() {
         <Route path="/areacolaborador" element={<PrivateRoute><AreaColaborador /></PrivateRoute>} /> \
         <Route path="/relatorio" element={ <PrivateRoute> <Relatorio/> </PrivateRoute> }/>
         <Route path="/kpi" element={ <PrivateRoute> <Kpi/> </PrivateRoute> }/>
-
-        <Route path="/participacao" element={ <PrivateRoute> <Participacao/> </PrivateRoute> }/>
-
-
+        <Route path="/participacao" element={ <Participacao/> }/>
         <Route path="/progresso" element={ <PrivateRoute> <Progresso/> </PrivateRoute> }/>
 
       </Routes>

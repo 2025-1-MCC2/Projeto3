@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { BotaoCadastro, BotaoHeader } from '../components/Styles'
 
 export default function Participacao() {
     const [formData, setFormData] = useState({
@@ -80,9 +81,23 @@ export default function Participacao() {
         fetchParticipacoes()
     }, [])
     return (
-        <div>
+        <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '10px',
+            maxWidth: 700,
+            justifyContent: 'center',
+            margin: '2% auto',
+            padding: '20px',
+            border: '1px solid #2c2c2c',
+            borderRadius: '15px',
+            }}>
             <h1>Cadastro de Participação</h1>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '10px',
+            }}>
                 <label>
                     Data da Participação:
                     <input
@@ -90,30 +105,51 @@ export default function Participacao() {
                         name="data_participacao"
                         value={formData.data_participacao}
                         onChange={handleChange}
+                        style={{
+                          padding: '4px 0 4px 4px',
+                          border: '1px solid #2c2c2c',
+                          borderRadius: '5px',
+                          maxWidth: '100%',
+                          width: '100%',
+                        }}
                     />
                 </label>
                 <label>
-                    Id Evento Participado:
+                    ID do Evento Participado:
                     <input
                         type="number"
                         name="id_evento_participado"
                         value={formData.id_evento_participado}
                         onChange={handleChange}
+                        style={{
+                          padding: '4px 0 4px 4px',
+                          border: '1px solid #2c2c2c',
+                          borderRadius: '5px',
+                          maxWidth: '100%',
+                          width: '100%',
+                        }}
                     />
                 </label>
                 <label>
-                    Id membro:
+                    ID do Membro:
                     <input
                         type="number"
                         name="id_membro"
                         value={formData.id_membro}
                         onChange={handleChange}
+                        style={{
+                          padding: '4px 0 4px 4px',
+                          border: '1px solid #2c2c2c',
+                          borderRadius: '5px',
+                          maxWidth: '100%',
+                          width: '100%',
+                        }}
                     />
                 </label>
-                <button type="submit">Registrar Participação</button>
+                <BotaoHeader type="submit" style={{width: '50%'}}>Registrar Participação</BotaoHeader>
             </form>
             {message && <p>{message}</p>}
-            <button onClick={handleMostrarParticipacoes}>Mostrar Participações</button>
+            <BotaoHeader onClick={handleMostrarParticipacoes} style={{width: '50%'}}>Mostrar Participações</BotaoHeader>
             {mostrarParticipacoes && (
                 <div>
                     <h2>Lista de Participações</h2>
@@ -124,7 +160,7 @@ export default function Participacao() {
                             </li>
                         ))}
                     </ul>
-                    <button onClick={handleFecharParticipacoes}>Fechar</button>
+                    <BotaoCadastro onClick={handleFecharParticipacoes}>Fechar</BotaoCadastro>
                 </div>
             )}
         </div>
