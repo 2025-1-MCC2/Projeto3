@@ -35,7 +35,7 @@ O Dashboard Institucional é uma plataforma de gestão inteligente desenvolvida 
 | Frontend           | React + Vite, CSS              |
 | Backend            | .NET                           |
 | Banco de Dados     | MySQL                          |
-| Gerenciamento de Estado | Context API                |
+| Gerenciamento de Estado | Context API               |
 | Gráficos e Visualizações | Recharts                 |
 | Outras Ferramentos | ESLint, Prettier, PostCSS      |
 
@@ -106,6 +106,7 @@ O Dashboard Institucional é uma plataforma de gestão inteligente desenvolvida 
 2. **Instale as dependências**
    ```sh
    npm install
+   npm install recharts
    ```
 
 3. **Inicie o servidor de desenvolvimento**
