@@ -32,12 +32,12 @@ O Dashboard Institucional é uma plataforma de gestão inteligente desenvolvida 
 
 | Área               | Tecnologias                    |
 |--------------------|--------------------------------|
-| Frontend           | React + Vite, CSS              |
-| Backend            | .NET                           |
-| Banco de Dados     | MySQL                          |
-| Gerenciamento de Estado | Context API               |
-| Gráficos e Visualizações | Recharts                 |
-| Outras Ferramentos | ESLint, Prettier, PostCSS      |
+|⚡ Frontend           | React + Vite, CSS              |
+|⚙ Backend            | .NET                           |
+|🗄 Banco de Dados     | MySQL                          |
+|🌐 Gerenciamento de Estado | Context API               |
+|📊 Gráficos e Visualizações | Recharts                 |
+|🔧 Outras Ferramentos | ESLint, Prettier, PostCSS      |
 
 ---
 
