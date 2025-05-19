@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { BotaoCadastro, BotaoHeader } from '../components/Styles'
 
 export default function Kpi() {
     const [formData, setFormData] = useState({
@@ -81,9 +82,20 @@ export default function Kpi() {
         fetchKpis()
     }, [])
     return (
-        <div>
-            <h1>Cadastro de KPI</h1>
-            <form onSubmit={handleSubmit}>
+        <div style={{
+            maxWidth: 700,
+            justifyContent: 'center',
+            margin: '2% auto',
+            padding: '20px',
+            border: '1px solid #2c2c2c',
+            borderRadius: '15px',
+            }}>
+            <h1 style={{textAlign: 'center'}}>Cadastro de KPI</h1>
+            <form onSubmit={handleSubmit} style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '10px',
+            }}>
                 <label>
                     Data Limite:
                     <input
@@ -91,6 +103,13 @@ export default function Kpi() {
                         name="data_limite"
                         value={formData.data_limite}
                         onChange={handleChange}
+                        style={{
+                          padding: '4px 0 4px 4px',
+                          border: '1px solid #2c2c2c',
+                          borderRadius: '5px',
+                          maxWidth: '100%',
+                          width: '100%',
+                        }}
                     />
                 </label>
                 <label>
@@ -100,6 +119,14 @@ export default function Kpi() {
                         name="descricao"
                         value={formData.descricao}
                         onChange={handleChange}
+                        style={{
+                          padding: '4px 0 4px 4px',
+                          border: '1px solid #2c2c2c',
+                          borderRadius: '5px',
+                          maxWidth: '100%',
+                          width: '100%',
+                          height: '200px',
+                        }}
                     />
                 </label>
                 <label>
@@ -109,12 +136,19 @@ export default function Kpi() {
                         name="valor"
                         value={formData.valor}
                         onChange={handleChange}
+                        style={{
+                          padding: '4px 0 4px 4px',
+                          border: '1px solid #2c2c2c',
+                          borderRadius: '5px',
+                          maxWidth: '100%',
+                          width: '100%',
+                        }}
                     />
                 </label>
-                <button type="submit">Criar KPI</button>
+                <BotaoHeader type="submit" style={{width: '50%', margin: '3% 0'}}>Criar KPI</BotaoHeader>
             </form>
             {message && <p>{message}</p>}
-            <button onClick={handleMostrarKpis}>Mostrar KPIs</button>
+            <BotaoHeader onClick={handleMostrarKpis} style={{width: '50%'}}>Mostrar KPIs</BotaoHeader>
             {mostrarKpis && (
                 <div>
                     <h2>Lista de KPIs</h2>
@@ -125,7 +159,7 @@ export default function Kpi() {
                             </li>
                         ))}
                     </ul>
-                    <button onClick={handleFecharKpis}>Fechar</button>
+                    <BotaoCadastro onClick={handleFecharKpis} style={{width: '50%'}}>Fechar</BotaoCadastro>
                 </div>
             )}
         </div>
