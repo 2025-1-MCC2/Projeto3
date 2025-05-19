@@ -48,12 +48,10 @@ valor float
 create table progresso(
 id_relatorio int,
 id_kpi int,
-resultado float, /* resultado do evento */,
-meta float, /* meta da empresa */
+resultado float, 
+meta float, 
 primary key (id_relatorio, id_kpi),
 constraint `fk_id_relatorio` foreign key (id_relatorio) references relatorio(id),
 constraint `fk_id_kpi` foreign key (id_kpi) references kpi(id)
-constraint `fk_meta` foreign key (meta) references kpi(valor)
-constraint `fk_resultado` foreign key (resultado) references relatorio(progresso)
 );
 

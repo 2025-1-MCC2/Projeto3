@@ -1,40 +1,46 @@
 import express from 'express'
-import db from '../db.js'
+import db from '../db.js'  // ajuste o caminho conforme sua estrutura
 
 const router = express.Router()
 
+// Rota POST para criar um novo progresso
 router.post('/progresso', async (req, res) => {
-  const {data_limite, descricao, valor } = req.body
+  console.log('Recebido no backend:', req.body) // para ajudar no debug
 
-  if ( !data_limite || !descricao || !valor ) {
+  const { id_relatorio, id_kpi, resultado, meta } = req.body
+
+  // Validação básica dos campos obrigatórios
+  if (
+    id_relatorio === undefined ||
+    id_kpi === undefined ||
+    resultado === undefined ||
+    meta === undefined
+  ) {
     return res.status(400).send('Campos obrigatórios faltando')
   }
-  
-  
+
   try {
     await db.execute(
-      `INSERT INTO progresso ( data_limite, descricao, valor)
-       VALUES (?, ?, ?)`,
-      [ data_limite, descricao, valor]
+      `INSERT INTO progresso (id_relatorio, id_kpi, resultado, meta)
+       VALUES (?, ?, ?, ?)`,
+      [parseInt(id_relatorio), parseInt(id_kpi), parseFloat(resultado), parseFloat(meta)]
     )
-    res.status(201).send('progresso registrado com sucesso')
-
+    res.status(201).send('Progresso registrado com sucesso')
   } catch (error) {
     console.error('Erro ao registrar progresso:', error)
-    res.status(500).send(error.stack)
-
+    res.status(500).send(error.message)
   }
 })
-// Rota para buscar todos os relatórios
+
+// Rota GET para listar todos os progressos
 router.get('/progresso', async (req, res) => {
-    try {
-      const [rows] = await db.execute('SELECT * FROM kpi ORDER BY id DESC')
-      res.json(rows)
-    } catch (error) {
-      console.error('Erro ao buscar kpi:', error)
-      res.status(500).send('Erro no servidor')
-    }
-  })
-  
+  try {
+    const [rows] = await db.execute('SELECT * FROM progresso')
+    res.json(rows)
+  } catch (error) {
+    console.error('Erro ao buscar progresso:', error)
+    res.status(500).send(error.message)
+  }
+})
 
 export default router

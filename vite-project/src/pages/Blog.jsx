@@ -20,16 +20,15 @@ const posts = [
     id: 1,
     title: "Como a Inteligência Artificial está revolucionando a educação",
     excerpt: "Explore as novas ferramentas de IA que estão transformando a forma como ensinamos e aprendemos.",
-    date: "01/05/2025 - 10:00 às 18:00",
+    date: "01/05/2025",
     category: "tecnologia",
     image: "https://source.unsplash.com/random/600x400/?ai,education"
   },
   {
     id: 2,
-    title: "Gamificação na Educação",
-    subtitle: "Como transformar o aprendizado em jogo",
+    title: "Gamificação na Educação: Como transformar o aprendizado em jogo",
     excerpt: "Descubra como elementos de jogos podem aumentar o engajamento dos alunos e melhorar os resultados de aprendizagem.",
-    date: "01/05/2025 - 10:00 às 18:00",
+    date: "01/05/2025",
     category: "tecnologia",
     image: "https://source.unsplash.com/random/600x400/?gamification,education"
   },
@@ -37,7 +36,7 @@ const posts = [
     id: 3,
     title: "Palestra",
     excerpt: "Palestra sobre desbloqueio do poder da mente na Prodam, empresa de tecnologia e comunicação de São Paulo.",
-    date: "01/05/2025 - 10:00 às 18:00",
+    date: "01/05/2025",
     category: "metodologia",
     image: "https://source.unsplash.com/random/600x400/?lecture,mind"
   },
@@ -45,24 +44,23 @@ const posts = [
     id: 4,
     title: "O instituto apoia competidores em maratona de programação!",
     excerpt: "Evento de programação promovido pelo Instituto Criativo com participação de diversos competidores.",
-    date: "01/05/2025 - 10:00 às 18:00",
+    date: "01/05/2025",
     category: "evento",
     image: "https://source.unsplash.com/random/600x400/?programming,event"
   },
   {
     id: 5,
-    title: "BNCC na Prática",
-    subtitle: "Implementando as competências gerais",
+    title: "BNCC na Prática: Implementando as competências gerais",
     excerpt: "Guia prático para implementar as competências da Base Nacional Comum Curricular.",
-    date: "01/05/2025 - 10:00 às 18:00",
+    date: "01/05/2025",
     category: "curriculo",
     image: "https://source.unsplash.com/random/600x400/?curriculum,education"
   },
   {
     id: 6,
-    title: "IA revolucionando a educação inclusiva",
-    excerpt: "Como a Inteligência Artificial está ajudando a criar ambientes de aprendizagem mais inclusivos.",
-    date: "01/05/2025 - 10:00 às 18:00",
+    title: "Como a Inteligência Artificial está revolucionando a educação",
+    excerpt: "Explore as novas ferramentas de IA que estão transformando a forma como ensinamos e aprendemos.",
+    date: "01/05/2025",
     category: "inclusao",
     image: "https://source.unsplash.com/random/600x400/?inclusion,education"
   }
